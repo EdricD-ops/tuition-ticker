@@ -236,6 +236,7 @@
 - 2026-11-10：README 致谢只写「港硕上课鼓励器」（HKU 版）。是否开源待定：第 8 阶段暂停，等和用户讨论。
 - 2026-11-10：确定开源路线：MIT + GitHub Pages + 小红书 / 抖音运营。第 8 阶段完成：README（中 / 英，含演示 GIF 和截图）、LICENSE、CONTRIBUTING、PR 模板、Pages 部署 workflow；新增 GoatCounter 匿名统计和几个功能事件、「请我喝杯咖啡」链接、设置里的隐私说明；示例和测试里的学校、课程代码换成虚构的；git 历史压成一个初始提交。
 - 2026-11-10：上线 GitHub Pages（https://edricd-ops.github.io/tuition-ticker/）。打赏入口加上爱发电：咖啡图标在两个链接都有时变成菜单（Buy Me a Coffee · 银行卡 / 爱发电 · 微信 / 支付宝）。
+- 2026-11-10：填上爱发电链接（`afdian.com/a/edric0108`），README 中英两版加「支持这个项目」；Buy Me a Coffee 用户名以后再补。
 
 ## 12. 和我协作的方式
 
