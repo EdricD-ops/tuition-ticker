@@ -96,7 +96,6 @@ export function SchoolSection({ draft, onChange, errors, showErrors }: SectionPr
           value={draft.tuition}
           min={0}
           step="any"
-          placeholder="420000"
           invalid={showErrors && !!errors.tuition}
           onValue={(n) => onChange({ ...draft, tuition: Math.max(0, n) })}
         />

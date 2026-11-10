@@ -121,5 +121,20 @@ export function RateNote({ className = '' }: { className?: string }) {
   } else {
     text = loading ? t('rateLoading') : t('rateUnavailable', { from, to });
   }
-  return <p className={`num font-mono text-[11px] text-muted ${className}`}>{text}</p>;
+  // Break only between the " · " parts, and balance the lines, so a narrow screen never
+  // leaves a lone character on its own line.
+  const parts = text.split(' · ');
+  return (
+    <p className={`num font-mono text-[11px] text-muted [text-wrap:balance] ${className}`}>
+      {parts.map((part, i) => (
+        <span key={i}>
+          <span className="whitespace-nowrap">
+            {part}
+            {i < parts.length - 1 && ' ·'}
+          </span>
+          {i < parts.length - 1 && ' '}
+        </span>
+      ))}
+    </p>
+  );
 }
