@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuition Ticker</title>
+    <meta name="description" content="A live counter of how much tuition each class burns, second by second." />
+    <meta name="theme-color" content="#f5f3ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#252523" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script>
+      // Apply a stored light/dark choice before first paint (see src/app/theme.ts).
+      try {
+        var theme = localStorage.getItem('tuition-ticker:theme');
+        if (theme === 'light' || theme === 'dark') document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    </script>
+    <!-- Link previews. Absolute URLs: crawlers don't resolve relative paths. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tuition Ticker" />
+    <meta property="og:title" content="Tuition Ticker · 上课学费计时器" />
+    <meta property="og:description" content="Watch your tuition tick away, second by second. 选中正在上的课，实时看这节课烧掉多少学费。" />
+    <meta property="og:url" content="https://edricd-ops.github.io/tuition-ticker/" />
+    <meta property="og:image" content="https://edricd-ops.github.io/tuition-ticker/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tuition Ticker dashboard showing HK$2,689.9 spent in the current class" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tuition Ticker · 上课学费计时器" />
+    <meta name="twitter:description" content="Watch your tuition tick away, second by second." />
+    <meta name="twitter:image" content="https://edricd-ops.github.io/tuition-ticker/og.png" />
+    <!--
+      Anonymous visit counts (GoatCounter: no cookies, ignores localhost). It reports the
+      path and query only, never the #hash, so configs in share links are not sent.
+    -->
+    <script
+      data-goatcounter="https://tuitionticker.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.v5.js"
+      crossorigin="anonymous"
+      integrity="sha384-atnOLvQb9t+jTSipvd75X2yginT4PjVbqDdlJAmxMm+wYElFmeR6EmLP5bYeoRVQ"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

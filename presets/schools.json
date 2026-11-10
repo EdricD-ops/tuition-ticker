@@ -1,0 +1,4879 @@
+{
+ "source": "QS World University Rankings 2027, top 500 excluding mainland China (names only; ranks not stored)",
+ "updated": "2026-11-10",
+ "schools": [
+  {
+   "id": "massachusetts-institute-of-technology",
+   "name": "Massachusetts Institute of Technology",
+   "zh": "麻省理工学院",
+   "aliases": [
+    "MIT",
+    "麻省理工"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "imperial-college-london",
+   "name": "Imperial College London",
+   "zh": "帝国理工学院",
+   "aliases": [
+    "Imperial",
+    "IC",
+    "帝国理工"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "stanford-university",
+   "name": "Stanford University",
+   "zh": "斯坦福大学",
+   "aliases": [
+    "Stanford"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "university-of-oxford",
+   "name": "University of Oxford",
+   "zh": "牛津大学",
+   "aliases": [
+    "Oxford"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "harvard-university",
+   "name": "Harvard University",
+   "zh": "哈佛大学",
+   "aliases": [
+    "Harvard"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-cambridge",
+   "name": "University of Cambridge",
+   "zh": "剑桥大学",
+   "aliases": [
+    "Cambridge"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "california-institute-of-technology",
+   "name": "California Institute of Technology",
+   "zh": "加州理工学院",
+   "aliases": [
+    "Caltech",
+    "加州理工"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "eth-zurich",
+   "name": "ETH Zurich",
+   "zh": "苏黎世联邦理工学院",
+   "aliases": [
+    "ETH",
+    "ETHZ",
+    "苏黎世联邦理工"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "university-college-london",
+   "name": "University College London",
+   "zh": "伦敦大学学院",
+   "aliases": [
+    "UCL"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "national-university-of-singapore",
+   "name": "National University of Singapore",
+   "local": "新加坡国立大学",
+   "zh": "新加坡国立大学",
+   "aliases": [
+    "NUS",
+    "国大",
+    "新国大"
+   ],
+   "country": "SG",
+   "timeZone": "Asia/Singapore"
+  },
+  {
+   "id": "the-university-of-hong-kong",
+   "name": "The University of Hong Kong",
+   "local": "香港大學",
+   "zh": "香港大学",
+   "aliases": [
+    "HKU",
+    "港大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "nanyang-technological-university-singapore",
+   "name": "Nanyang Technological University, Singapore",
+   "local": "南洋理工大学",
+   "zh": "南洋理工大学",
+   "aliases": [
+    "NTU",
+    "南洋理工",
+    "南大"
+   ],
+   "country": "SG",
+   "timeZone": "Asia/Singapore"
+  },
+  {
+   "id": "university-of-pennsylvania",
+   "name": "University of Pennsylvania",
+   "zh": "宾夕法尼亚大学",
+   "aliases": [
+    "UPenn",
+    "Penn",
+    "宾大"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "cornell-university",
+   "name": "Cornell University",
+   "zh": "康奈尔大学",
+   "aliases": [
+    "Cornell"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "yale-university",
+   "name": "Yale University",
+   "zh": "耶鲁大学",
+   "aliases": [
+    "Yale"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "the-chinese-university-of-hong-kong",
+   "name": "The Chinese University of Hong Kong",
+   "local": "香港中文大學",
+   "zh": "香港中文大学",
+   "aliases": [
+    "CUHK",
+    "港中文",
+    "中大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "the-university-of-new-south-wales",
+   "name": "The University of New South Wales",
+   "zh": "新南威尔士大学",
+   "aliases": [
+    "UNSW",
+    "UNSW Sydney",
+    "新南"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "johns-hopkins-university",
+   "name": "Johns Hopkins University",
+   "zh": "约翰斯·霍普金斯大学",
+   "aliases": [
+    "JHU",
+    "Johns Hopkins",
+    "约翰霍普金斯"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-california-berkeley",
+   "name": "University of California, Berkeley",
+   "zh": "加州大学伯克利分校",
+   "aliases": [
+    "UC Berkeley",
+    "UCB",
+    "Berkeley",
+    "伯克利"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "epfl-ecole-polytechnique-federale-de-lausanne",
+   "name": "EPFL – École polytechnique fédérale de Lausanne",
+   "zh": "洛桑联邦理工学院",
+   "aliases": [
+    "EPFL",
+    "洛桑联邦理工"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "the-university-of-melbourne",
+   "name": "The University of Melbourne",
+   "zh": "墨尔本大学",
+   "aliases": [
+    "UniMelb",
+    "墨大"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "university-of-chicago",
+   "name": "University of Chicago",
+   "zh": "芝加哥大学",
+   "aliases": [
+    "UChicago"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "technical-university-of-munich",
+   "name": "Technical University of Munich",
+   "zh": "慕尼黑工业大学",
+   "aliases": [
+    "TUM",
+    "慕工大"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "princeton-university",
+   "name": "Princeton University",
+   "zh": "普林斯顿大学",
+   "aliases": [
+    "Princeton"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "the-university-of-sydney",
+   "name": "The University of Sydney",
+   "zh": "悉尼大学",
+   "aliases": [
+    "USYD",
+    "悉大"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "australian-national-university",
+   "name": "Australian National University",
+   "zh": "澳大利亚国立大学",
+   "aliases": [
+    "ANU",
+    "澳国立"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "mcgill-university",
+   "name": "McGill University",
+   "zh": "麦吉尔大学",
+   "aliases": [
+    "McGill"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "monash-university",
+   "name": "Monash University",
+   "zh": "莫纳什大学",
+   "aliases": [
+    "Monash",
+    "蒙纳士大学"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "university-of-toronto",
+   "name": "University of Toronto",
+   "zh": "多伦多大学",
+   "aliases": [
+    "UofT",
+    "多大"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "the-hong-kong-university-of-science-and-technology",
+   "name": "The Hong Kong University of Science and Technology",
+   "local": "香港科技大學",
+   "zh": "香港科技大学",
+   "aliases": [
+    "HKUST",
+    "港科大",
+    "科大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "universite-psl",
+   "name": "Université PSL",
+   "zh": "巴黎文理研究大学",
+   "aliases": [
+    "PSL",
+    "Paris Sciences et Lettres"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "the-university-of-edinburgh",
+   "name": "The University of Edinburgh",
+   "zh": "爱丁堡大学",
+   "aliases": [
+    "Edinburgh",
+    "爱大"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "king-s-college-london",
+   "name": "King's College London",
+   "zh": "伦敦国王学院",
+   "aliases": [
+    "KCL",
+    "King's College",
+    "国王学院"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "seoul-national-university",
+   "name": "Seoul National University",
+   "local": "서울대학교",
+   "zh": "首尔大学",
+   "aliases": [
+    "SNU",
+    "首尔国立大学"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "the-university-of-tokyo",
+   "name": "The University of Tokyo",
+   "local": "東京大学",
+   "zh": "东京大学",
+   "aliases": [
+    "UTokyo",
+    "东大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "the-university-of-manchester",
+   "name": "The University of Manchester",
+   "zh": "曼彻斯特大学",
+   "aliases": [
+    "Manchester",
+    "曼大"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "the-university-of-queensland",
+   "name": "The University of Queensland",
+   "zh": "昆士兰大学",
+   "aliases": [
+    "UQ",
+    "昆大"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "yonsei-university",
+   "name": "Yonsei University",
+   "local": "연세대학교",
+   "zh": "延世大学",
+   "aliases": [
+    "Yonsei"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "columbia-university",
+   "name": "Columbia University",
+   "zh": "哥伦比亚大学",
+   "aliases": [
+    "Columbia"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "institut-polytechnique-de-paris",
+   "name": "Institut Polytechnique de Paris",
+   "zh": "巴黎理工学院",
+   "aliases": [
+    "IP Paris",
+    "Polytechnique"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "northwestern-university",
+   "name": "Northwestern University",
+   "zh": "西北大学",
+   "aliases": [
+    "Northwestern",
+    "NU"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "university-of-british-columbia",
+   "name": "University of British Columbia",
+   "zh": "英属哥伦比亚大学",
+   "aliases": [
+    "UBC"
+   ],
+   "country": "CA",
+   "timeZone": "America/Vancouver"
+  },
+  {
+   "id": "delft-university-of-technology",
+   "name": "Delft University of Technology",
+   "zh": "代尔夫特理工大学",
+   "aliases": [
+    "TU Delft",
+    "代尔夫特"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "university-of-california-los-angeles",
+   "name": "University of California, Los Angeles",
+   "zh": "加州大学洛杉矶分校",
+   "aliases": [
+    "UCLA"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "the-hong-kong-polytechnic-university",
+   "name": "The Hong Kong Polytechnic University",
+   "local": "香港理工大學",
+   "zh": "香港理工大学",
+   "aliases": [
+    "PolyU",
+    "理大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "university-of-michigan-ann-arbor",
+   "name": "University of Michigan-Ann Arbor",
+   "zh": "密歇根大学安娜堡分校",
+   "aliases": [
+    "UMich",
+    "Michigan",
+    "密歇根大学"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "city-university-of-hong-kong",
+   "name": "City University of Hong Kong",
+   "local": "香港城市大學",
+   "zh": "香港城市大学",
+   "aliases": [
+    "CityUHK",
+    "CityU",
+    "城大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "korea-university",
+   "name": "Korea University",
+   "local": "고려대학교",
+   "zh": "高丽大学",
+   "aliases": [
+    "KU"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "national-taiwan-university",
+   "name": "National Taiwan University",
+   "local": "國立臺灣大學",
+   "zh": "国立台湾大学",
+   "aliases": [
+    "NTU",
+    "台大",
+    "台湾大学"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "carnegie-mellon-university",
+   "name": "Carnegie Mellon University",
+   "zh": "卡内基梅隆大学",
+   "aliases": [
+    "CMU",
+    "卡耐基梅隆"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universiti-malaya",
+   "name": "Universiti Malaya",
+   "zh": "马来亚大学",
+   "aliases": [
+    "UM",
+    "Malaya"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "university-of-bristol",
+   "name": "University of Bristol",
+   "zh": "布里斯托大学",
+   "aliases": [
+    "Bristol"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "new-york-university",
+   "name": "New York University",
+   "zh": "纽约大学",
+   "aliases": [
+    "NYU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "ku-leuven",
+   "name": "KU Leuven",
+   "zh": "鲁汶大学",
+   "aliases": [
+    "荷语鲁汶"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "university-of-amsterdam",
+   "name": "University of Amsterdam",
+   "zh": "阿姆斯特丹大学",
+   "aliases": [
+    "UvA"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "ludwig-maximilians-universitat-munchen",
+   "name": "Ludwig-Maximilians-Universität München",
+   "zh": "慕尼黑大学",
+   "aliases": [
+    "LMU",
+    "LMU Munich"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "the-london-school-of-economics-and-political-science",
+   "name": "The London School of Economics and Political Science",
+   "zh": "伦敦政治经济学院",
+   "aliases": [
+    "LSE",
+    "伦敦政经"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "king-fahd-university-of-petroleum-and-minerals",
+   "name": "King Fahd University of Petroleum and Minerals",
+   "zh": "法赫德国王石油与矿产大学",
+   "aliases": [
+    "KFUPM"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "kyoto-university",
+   "name": "Kyoto University",
+   "local": "京都大学",
+   "zh": "京都大学",
+   "aliases": [
+    "Kyoto",
+    "京大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "kaist",
+   "name": "KAIST",
+   "local": "한국과학기술원",
+   "zh": "韩国科学技术院",
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "brown-university",
+   "name": "Brown University",
+   "zh": "布朗大学",
+   "aliases": [
+    "Brown"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "the-university-of-auckland",
+   "name": "The University of Auckland",
+   "zh": "奥克兰大学",
+   "aliases": [
+    "UoA",
+    "Auckland"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "the-university-of-warwick",
+   "name": "The University of Warwick",
+   "zh": "华威大学",
+   "aliases": [
+    "Warwick"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-birmingham",
+   "name": "University of Birmingham",
+   "zh": "伯明翰大学",
+   "aliases": [
+    "Birmingham",
+    "UoB"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "duke-university",
+   "name": "Duke University",
+   "zh": "杜克大学",
+   "aliases": [
+    "Duke"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "lund-university",
+   "name": "Lund University",
+   "zh": "隆德大学",
+   "aliases": [
+    "Lund"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "university-of-texas-at-austin",
+   "name": "University of Texas at Austin",
+   "zh": "德克萨斯大学奥斯汀分校",
+   "aliases": [
+    "UT Austin",
+    "UT"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "sorbonne-university",
+   "name": "Sorbonne University",
+   "zh": "索邦大学",
+   "aliases": [
+    "Sorbonne"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "university-of-illinois-urbana-champaign",
+   "name": "University of Illinois Urbana-Champaign",
+   "zh": "伊利诺伊大学厄巴纳-香槟分校",
+   "aliases": [
+    "UIUC",
+    "伊大"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "trinity-college-dublin-the-university-of-dublin",
+   "name": "Trinity College Dublin, The University of Dublin",
+   "zh": "都柏林圣三一大学",
+   "aliases": [
+    "TCD",
+    "Trinity College Dublin",
+    "圣三一"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "universite-paris-saclay",
+   "name": "Université Paris-Saclay",
+   "zh": "巴黎-萨克雷大学",
+   "aliases": [
+    "Paris-Saclay",
+    "巴黎萨克雷"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "the-university-of-western-australia",
+   "name": "The University of Western Australia",
+   "zh": "西澳大学",
+   "aliases": [
+    "UWA"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Perth"
+  },
+  {
+   "id": "university-of-leeds",
+   "name": "University of Leeds",
+   "zh": "利兹大学",
+   "aliases": [
+    "Leeds"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "adelaide-university",
+   "name": "Adelaide University",
+   "zh": "阿德莱德大学",
+   "aliases": [
+    "Adelaide"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Adelaide"
+  },
+  {
+   "id": "university-of-glasgow",
+   "name": "University of Glasgow",
+   "zh": "格拉斯哥大学",
+   "aliases": [
+    "Glasgow"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-california-san-diego",
+   "name": "University of California, San Diego",
+   "zh": "加州大学圣地亚哥分校",
+   "aliases": [
+    "UCSD"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "kth-royal-institute-of-technology",
+   "name": "KTH Royal Institute of Technology",
+   "zh": "瑞典皇家理工学院",
+   "aliases": [
+    "KTH"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "the-university-of-sheffield",
+   "name": "The University of Sheffield",
+   "zh": "谢菲尔德大学",
+   "aliases": [
+    "Sheffield"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universidad-de-buenos-aires",
+   "name": "Universidad de Buenos Aires",
+   "zh": "布宜诺斯艾利斯大学",
+   "aliases": [
+    "UBA"
+   ],
+   "country": "AR",
+   "timeZone": "America/Argentina/Buenos_Aires"
+  },
+  {
+   "id": "durham-university",
+   "name": "Durham University",
+   "zh": "杜伦大学",
+   "aliases": [
+    "Durham"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universitat-heidelberg",
+   "name": "Universität Heidelberg",
+   "zh": "海德堡大学",
+   "aliases": [
+    "Heidelberg"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "politecnico-di-milano",
+   "name": "Politecnico di Milano",
+   "zh": "米兰理工大学",
+   "aliases": [
+    "Polimi"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "university-of-technology-sydney",
+   "name": "University of Technology Sydney",
+   "zh": "悉尼科技大学",
+   "aliases": [
+    "UTS"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "uppsala-university",
+   "name": "Uppsala University",
+   "zh": "乌普萨拉大学",
+   "aliases": [
+    "Uppsala"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "university-of-copenhagen",
+   "name": "University of Copenhagen",
+   "zh": "哥本哈根大学",
+   "aliases": [
+    "UCPH",
+    "KU"
+   ],
+   "country": "DK",
+   "timeZone": "Europe/Copenhagen"
+  },
+  {
+   "id": "pennsylvania-state-university",
+   "name": "Pennsylvania State University",
+   "zh": "宾夕法尼亚州立大学",
+   "aliases": [
+    "Penn State",
+    "PSU",
+    "宾州州立"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-washington",
+   "name": "University of Washington",
+   "zh": "华盛顿大学",
+   "aliases": [
+    "UW",
+    "华大"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "boston-university",
+   "name": "Boston University",
+   "zh": "波士顿大学",
+   "aliases": [
+    "BU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "the-university-of-osaka",
+   "name": "The University of Osaka",
+   "local": "大阪大学",
+   "zh": "大阪大学",
+   "aliases": [
+    "Osaka",
+    "阪大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "university-of-alberta",
+   "name": "University of Alberta",
+   "zh": "阿尔伯塔大学",
+   "aliases": [
+    "UAlberta"
+   ],
+   "country": "CA",
+   "timeZone": "America/Edmonton"
+  },
+  {
+   "id": "institute-of-science-tokyo",
+   "name": "Institute of Science Tokyo",
+   "local": "東京科学大学",
+   "zh": "东京科学大学",
+   "aliases": [
+    "Science Tokyo",
+    "Tokyo Tech",
+    "东京工业大学",
+    "东工大",
+    "东京医科齿科大学"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "university-of-nottingham",
+   "name": "University of Nottingham",
+   "zh": "诺丁汉大学",
+   "aliases": [
+    "Nottingham"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "freie-universitat-berlin",
+   "name": "Freie Universität Berlin",
+   "zh": "柏林自由大学",
+   "aliases": [
+    "FU Berlin"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-zurich",
+   "name": "University of Zurich",
+   "zh": "苏黎世大学",
+   "aliases": [
+    "UZH"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "purdue-university",
+   "name": "Purdue University",
+   "zh": "普渡大学",
+   "aliases": [
+    "Purdue"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-college-dublin",
+   "name": "University College Dublin",
+   "zh": "都柏林大学学院",
+   "aliases": [
+    "UCD",
+    "都柏林大学"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "tohoku-university",
+   "name": "Tohoku University",
+   "local": "東北大学",
+   "zh": "东北大学（日本）",
+   "aliases": [
+    "Tohoku",
+    "東北大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "queen-mary-university-of-london",
+   "name": "Queen Mary University of London",
+   "zh": "伦敦玛丽女王大学",
+   "aliases": [
+    "QMUL",
+    "Queen Mary"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "rwth-aachen-university",
+   "name": "RWTH Aachen University",
+   "zh": "亚琛工业大学",
+   "aliases": [
+    "RWTH",
+    "亚琛"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "technical-university-of-denmark",
+   "name": "Technical University of Denmark",
+   "zh": "丹麦技术大学",
+   "aliases": [
+    "DTU"
+   ],
+   "country": "DK",
+   "timeZone": "Europe/Copenhagen"
+  },
+  {
+   "id": "pohang-university-of-science-and-technology",
+   "name": "Pohang University of Science and Technology",
+   "local": "포항공과대학교",
+   "zh": "浦项科技大学",
+   "aliases": [
+    "POSTECH",
+    "浦项工大"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "king-saud-university",
+   "name": "King Saud University",
+   "zh": "沙特国王大学",
+   "aliases": [
+    "KSU"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "sungkyunkwan-university",
+   "name": "Sungkyunkwan University",
+   "local": "성균관대학교",
+   "zh": "成均馆大学",
+   "aliases": [
+    "SKKU"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "qatar-university",
+   "name": "Qatar University",
+   "zh": "卡塔尔大学",
+   "aliases": [
+    "QU"
+   ],
+   "country": "QA",
+   "timeZone": "Asia/Qatar"
+  },
+  {
+   "id": "karlsruhe-institute-of-technology",
+   "name": "Karlsruhe Institute of Technology",
+   "zh": "卡尔斯鲁厄理工学院",
+   "aliases": [
+    "KIT",
+    "KIT, Karlsruhe Institute of Technology"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "sapienza-university-of-rome",
+   "name": "Sapienza University of Rome",
+   "zh": "罗马大学",
+   "aliases": [
+    "Sapienza",
+    "罗马第一大学"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "university-of-southampton",
+   "name": "University of Southampton",
+   "zh": "南安普顿大学",
+   "aliases": [
+    "Southampton"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-waterloo",
+   "name": "University of Waterloo",
+   "zh": "滑铁卢大学",
+   "aliases": [
+    "UWaterloo",
+    "滑铁卢"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "utrecht-university",
+   "name": "Utrecht University",
+   "zh": "乌得勒支大学",
+   "aliases": [
+    "Utrecht"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "lomonosov-moscow-state-university",
+   "name": "Lomonosov Moscow State University",
+   "zh": "莫斯科国立大学",
+   "aliases": [
+    "MSU",
+    "莫大",
+    "罗蒙诺索夫"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "university-of-st-andrews",
+   "name": "University of St Andrews",
+   "zh": "圣安德鲁斯大学",
+   "aliases": [
+    "St Andrews",
+    "圣安"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "indian-institute-of-technology-delhi",
+   "name": "Indian Institute of Technology Delhi",
+   "zh": "印度理工学院德里分校",
+   "aliases": [
+    "IITD",
+    "IIT Delhi"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "leiden-university",
+   "name": "Leiden University",
+   "zh": "莱顿大学",
+   "aliases": [
+    "Leiden"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "pontificia-universidad-catolica-de-chile",
+   "name": "Pontificia Universidad Católica de Chile",
+   "zh": "智利天主教大学",
+   "aliases": [
+    "UC Chile",
+    "PUC"
+   ],
+   "country": "CL",
+   "timeZone": "America/Santiago"
+  },
+  {
+   "id": "rmit-university",
+   "name": "RMIT University",
+   "zh": "皇家墨尔本理工大学",
+   "aliases": [
+    "RMIT"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "rice-university",
+   "name": "Rice University",
+   "zh": "莱斯大学",
+   "aliases": [
+    "Rice"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "alma-mater-studiorum-universita-di-bologna",
+   "name": "Alma Mater Studiorum - Università di Bologna",
+   "zh": "博洛尼亚大学",
+   "aliases": [
+    "Unibo",
+    "Bologna"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "university-of-helsinki",
+   "name": "University of Helsinki",
+   "zh": "赫尔辛基大学",
+   "aliases": [
+    "Helsinki"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "university-of-bath",
+   "name": "University of Bath",
+   "zh": "巴斯大学",
+   "aliases": [
+    "Bath"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "aalto-university",
+   "name": "Aalto University",
+   "zh": "阿尔托大学",
+   "aliases": [
+    "Aalto"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "macquarie-university",
+   "name": "Macquarie University",
+   "zh": "麦考瑞大学",
+   "aliases": [
+    "Macquarie",
+    "MQ"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "aarhus-university",
+   "name": "Aarhus University",
+   "zh": "奥胡斯大学",
+   "aliases": [
+    "Aarhus",
+    "AU"
+   ],
+   "country": "DK",
+   "timeZone": "Europe/Copenhagen"
+  },
+  {
+   "id": "universiti-sains-malaysia",
+   "name": "Universiti Sains Malaysia",
+   "zh": "马来西亚理科大学",
+   "aliases": [
+    "USM"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "universiti-kebangsaan-malaysia",
+   "name": "Universiti Kebangsaan Malaysia",
+   "zh": "马来西亚国民大学",
+   "aliases": [
+    "UKM"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "university-of-oslo",
+   "name": "University of Oslo",
+   "zh": "奥斯陆大学",
+   "aliases": [
+    "UiO",
+    "Oslo"
+   ],
+   "country": "NO",
+   "timeZone": "Europe/Oslo"
+  },
+  {
+   "id": "university-of-wisconsin-madison",
+   "name": "University of Wisconsin-Madison",
+   "zh": "威斯康星大学麦迪逊分校",
+   "aliases": [
+    "UW-Madison"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "universidade-de-sao-paulo",
+   "name": "Universidade de São Paulo",
+   "zh": "圣保罗大学",
+   "aliases": [
+    "USP"
+   ],
+   "country": "BR",
+   "timeZone": "America/Sao_Paulo"
+  },
+  {
+   "id": "indian-institute-of-technology-bombay",
+   "name": "Indian Institute of Technology Bombay",
+   "zh": "印度理工学院孟买分校",
+   "aliases": [
+    "IITB",
+    "IIT Bombay"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "university-of-exeter",
+   "name": "University of Exeter",
+   "zh": "埃克塞特大学",
+   "aliases": [
+    "Exeter"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-california-davis",
+   "name": "University of California, Davis",
+   "zh": "加州大学戴维斯分校",
+   "aliases": [
+    "UC Davis",
+    "UCD"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "universiti-putra-malaysia",
+   "name": "Universiti Putra Malaysia",
+   "zh": "马来西亚博特拉大学",
+   "aliases": [
+    "UPM"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "university-of-liverpool",
+   "name": "University of Liverpool",
+   "zh": "利物浦大学",
+   "aliases": [
+    "Liverpool"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "humboldt-universitat-zu-berlin",
+   "name": "Humboldt-Universität zu Berlin",
+   "zh": "柏林洪堡大学",
+   "aliases": [
+    "HU Berlin",
+    "洪堡大学"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-vienna",
+   "name": "University of Vienna",
+   "zh": "维也纳大学",
+   "aliases": [
+    "Univie"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "georgia-institute-of-technology",
+   "name": "Georgia Institute of Technology",
+   "zh": "佐治亚理工学院",
+   "aliases": [
+    "Georgia Tech",
+    "GT",
+    "佐治亚理工"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "national-tsing-hua-university",
+   "name": "National Tsing Hua University",
+   "local": "國立清華大學",
+   "zh": "国立清华大学",
+   "aliases": [
+    "NTHU",
+    "清大",
+    "台湾清华"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "western-university",
+   "name": "Western University",
+   "zh": "西安大略大学",
+   "aliases": [
+    "Western",
+    "UWO"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "universidad-nacional-autonoma-de-mexico",
+   "name": "Universidad Nacional Autónoma de México",
+   "zh": "墨西哥国立自治大学",
+   "aliases": [
+    "UNAM"
+   ],
+   "country": "MX",
+   "timeZone": "America/Mexico_City"
+  },
+  {
+   "id": "khalifa-university",
+   "name": "Khalifa University",
+   "zh": "哈利法大学",
+   "aliases": [
+    "KU"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "erasmus-university-rotterdam",
+   "name": "Erasmus University Rotterdam",
+   "zh": "鹿特丹伊拉斯姆斯大学",
+   "aliases": [
+    "EUR",
+    "伊拉斯姆斯"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "newcastle-university",
+   "name": "Newcastle University",
+   "zh": "纽卡斯尔大学（英国）",
+   "aliases": [
+    "Newcastle",
+    "NCL"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "ghent-university",
+   "name": "Ghent University",
+   "zh": "根特大学",
+   "aliases": [
+    "UGent"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "university-of-basel",
+   "name": "University of Basel",
+   "zh": "巴塞尔大学",
+   "aliases": [
+    "Unibas"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "eindhoven-university-of-technology",
+   "name": "Eindhoven University of Technology",
+   "zh": "埃因霍温理工大学",
+   "aliases": [
+    "TU/e",
+    "TUe"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "university-of-southern-california",
+   "name": "University of Southern California",
+   "zh": "南加州大学",
+   "aliases": [
+    "USC"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "wageningen-university-research",
+   "name": "Wageningen University & Research",
+   "zh": "瓦赫宁根大学",
+   "aliases": [
+    "WUR"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "hanyang-university",
+   "name": "Hanyang University",
+   "local": "한양대학교",
+   "zh": "汉阳大学",
+   "aliases": [
+    "Hanyang"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "nagoya-university",
+   "name": "Nagoya University",
+   "local": "名古屋大学",
+   "zh": "名古屋大学",
+   "aliases": [
+    "Nagoya",
+    "名大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "university-of-groningen",
+   "name": "University of Groningen",
+   "zh": "格罗宁根大学",
+   "aliases": [
+    "RUG",
+    "Groningen"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "technische-universitat-berlin",
+   "name": "Technische Universität Berlin",
+   "zh": "柏林工业大学",
+   "aliases": [
+    "TU Berlin",
+    "TUB"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universiti-teknologi-malaysia",
+   "name": "Universiti Teknologi Malaysia",
+   "zh": "马来西亚理工大学",
+   "aliases": [
+    "UTM"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "university-of-north-carolina-at-chapel-hill",
+   "name": "University of North Carolina at Chapel Hill",
+   "zh": "北卡罗来纳大学教堂山分校",
+   "aliases": [
+    "UNC",
+    "UNC Chapel Hill"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-york",
+   "name": "University of York",
+   "zh": "约克大学（英国）",
+   "aliases": [
+    "York"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universite-de-montreal",
+   "name": "Université de Montréal",
+   "zh": "蒙特利尔大学",
+   "aliases": [
+    "UdeM"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "washington-university-in-st-louis",
+   "name": "Washington University in St. Louis",
+   "zh": "圣路易斯华盛顿大学",
+   "aliases": [
+    "WashU",
+    "WUSTL"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "lancaster-university",
+   "name": "Lancaster University",
+   "zh": "兰卡斯特大学",
+   "aliases": [
+    "Lancaster"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universitat-de-barcelona",
+   "name": "Universitat de Barcelona",
+   "zh": "巴塞罗那大学",
+   "aliases": [
+    "UB"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "stockholm-university",
+   "name": "Stockholm University",
+   "zh": "斯德哥尔摩大学",
+   "aliases": [
+    "SU"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "university-of-geneva",
+   "name": "University of Geneva",
+   "zh": "日内瓦大学",
+   "aliases": [
+    "UNIGE"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "texas-a-m-university",
+   "name": "Texas A&M University",
+   "zh": "德州农工大学",
+   "aliases": [
+    "TAMU",
+    "Texas A&M",
+    "德克萨斯农工大学"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "indian-institute-of-technology-madras",
+   "name": "Indian Institute of Technology Madras",
+   "zh": "印度理工学院马德拉斯分校",
+   "aliases": [
+    "IITM",
+    "IIT Madras"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "kyushu-university",
+   "name": "Kyushu University",
+   "local": "九州大学",
+   "zh": "九州大学",
+   "aliases": [
+    "Kyushu",
+    "九大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "arizona-state-university",
+   "name": "Arizona State University",
+   "zh": "亚利桑那州立大学",
+   "aliases": [
+    "ASU"
+   ],
+   "country": "US",
+   "timeZone": "America/Phoenix"
+  },
+  {
+   "id": "university-of-california-santa-barbara",
+   "name": "University of California, Santa Barbara",
+   "zh": "加州大学圣塔芭芭拉分校",
+   "aliases": [
+    "UCSB"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "chalmers-university-of-technology",
+   "name": "Chalmers University of Technology",
+   "zh": "查尔姆斯理工大学",
+   "aliases": [
+    "Chalmers"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "mcmaster-university",
+   "name": "McMaster University",
+   "zh": "麦克马斯特大学",
+   "aliases": [
+    "McMaster"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "queen-s-university-belfast",
+   "name": "Queen's University Belfast",
+   "zh": "贝尔法斯特女王大学",
+   "aliases": [
+    "QUB"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "al-farabi-kazakh-national-university",
+   "name": "Al-Farabi Kazakh National University",
+   "zh": "哈萨克斯坦国立大学",
+   "aliases": [
+    "KazNU",
+    "Al-Farabi"
+   ],
+   "country": "KZ",
+   "timeZone": "Asia/Almaty"
+  },
+  {
+   "id": "national-yang-ming-chiao-tung-university",
+   "name": "National Yang Ming Chiao Tung University",
+   "local": "國立陽明交通大學",
+   "zh": "国立阳明交通大学",
+   "aliases": [
+    "NYCU",
+    "阳明交大",
+    "交大"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "cardiff-university",
+   "name": "Cardiff University",
+   "zh": "卡迪夫大学",
+   "aliases": [
+    "Cardiff"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "hokkaido-university",
+   "name": "Hokkaido University",
+   "local": "北海道大学",
+   "zh": "北海道大学",
+   "aliases": [
+    "Hokkaido",
+    "北大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "queen-s-university-at-kingston",
+   "name": "Queen's University at Kingston",
+   "zh": "女王大学（加拿大）",
+   "aliases": [
+    "Queen's",
+    "QU"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "michigan-state-university",
+   "name": "Michigan State University",
+   "zh": "密歇根州立大学",
+   "aliases": [
+    "MSU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "emory-university",
+   "name": "Emory University",
+   "zh": "埃默里大学",
+   "aliases": [
+    "Emory"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-cape-town",
+   "name": "University of Cape Town",
+   "zh": "开普敦大学",
+   "aliases": [
+    "UCT"
+   ],
+   "country": "ZA",
+   "timeZone": "Africa/Johannesburg"
+  },
+  {
+   "id": "technische-universitat-dresden",
+   "name": "Technische Universität Dresden",
+   "zh": "德累斯顿工业大学",
+   "aliases": [
+    "TU Dresden"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universidad-de-chile",
+   "name": "Universidad de Chile",
+   "zh": "智利大学",
+   "aliases": [
+    "UChile"
+   ],
+   "country": "CL",
+   "timeZone": "America/Santiago"
+  },
+  {
+   "id": "vrije-universiteit-amsterdam",
+   "name": "Vrije Universiteit Amsterdam",
+   "zh": "阿姆斯特丹自由大学",
+   "aliases": [
+    "VU",
+    "VU Amsterdam"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "tecnologico-de-monterrey",
+   "name": "Tecnológico de Monterrey",
+   "zh": "蒙特雷科技大学",
+   "aliases": [
+    "Tec",
+    "ITESM"
+   ],
+   "country": "MX",
+   "timeZone": "America/Monterrey"
+  },
+  {
+   "id": "curtin-university",
+   "name": "Curtin University",
+   "zh": "科廷大学",
+   "aliases": [
+    "Curtin"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Perth"
+  },
+  {
+   "id": "national-cheng-kung-university",
+   "name": "National Cheng Kung University",
+   "local": "國立成功大學",
+   "zh": "国立成功大学",
+   "aliases": [
+    "NCKU",
+    "成大"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "technische-universitat-wien",
+   "name": "Technische Universität Wien",
+   "zh": "维也纳工业大学",
+   "aliases": [
+    "TU Wien"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "universitas-indonesia",
+   "name": "Universitas Indonesia",
+   "zh": "印度尼西亚大学",
+   "aliases": [
+    "UI"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "university-of-bern",
+   "name": "University of Bern",
+   "zh": "伯尔尼大学",
+   "aliases": [
+    "UniBE"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "university-of-wollongong",
+   "name": "University of Wollongong",
+   "zh": "卧龙岗大学",
+   "aliases": [
+    "UOW"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "universite-catholique-de-louvain",
+   "name": "Université catholique de Louvain",
+   "zh": "新鲁汶大学",
+   "aliases": [
+    "UCLouvain",
+    "法语鲁汶"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "university-of-reading",
+   "name": "University of Reading",
+   "zh": "雷丁大学",
+   "aliases": [
+    "Reading"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-otago",
+   "name": "University of Otago",
+   "zh": "奥塔哥大学",
+   "aliases": [
+    "Otago"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "complutense-university-of-madrid",
+   "name": "Complutense University of Madrid",
+   "zh": "马德里康普顿斯大学",
+   "aliases": [
+    "UCM",
+    "Complutense"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "king-abdulaziz-university",
+   "name": "King Abdulaziz University",
+   "zh": "阿卜杜勒阿齐兹国王大学",
+   "aliases": [
+    "KAU"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "the-ohio-state-university",
+   "name": "The Ohio State University",
+   "zh": "俄亥俄州立大学",
+   "aliases": [
+    "OSU",
+    "Ohio State"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "waseda-university",
+   "name": "Waseda University",
+   "local": "早稲田大学",
+   "zh": "早稻田大学",
+   "aliases": [
+    "Waseda",
+    "早大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "loughborough-university",
+   "name": "Loughborough University",
+   "zh": "拉夫堡大学",
+   "aliases": [
+    "Loughborough"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universita-di-padova",
+   "name": "Università di Padova",
+   "zh": "帕多瓦大学",
+   "aliases": [
+    "Unipd"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "indian-institute-of-technology-kharagpur",
+   "name": "Indian Institute of Technology Kharagpur",
+   "zh": "印度理工学院克勒格布尔分校",
+   "aliases": [
+    "IIT Kharagpur",
+    "IIT-KGP"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "universitas-gadjah-mada",
+   "name": "Universitas Gadjah Mada",
+   "zh": "加札马达大学",
+   "aliases": [
+    "UGM",
+    "Gadjah Mada University"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "politecnico-di-torino",
+   "name": "Politecnico di Torino",
+   "zh": "都灵理工大学",
+   "aliases": [
+    "PoliTo"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "tel-aviv-university",
+   "name": "Tel Aviv University",
+   "zh": "特拉维夫大学",
+   "aliases": [
+    "TAU"
+   ],
+   "country": "IL",
+   "timeZone": "Asia/Jerusalem"
+  },
+  {
+   "id": "rheinische-friedrich-wilhelms-universitat-bonn",
+   "name": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+   "zh": "波恩大学",
+   "aliases": [
+    "Bonn"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universitat-hamburg",
+   "name": "Universität Hamburg",
+   "zh": "汉堡大学",
+   "aliases": [
+    "UHH"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universitat-autonoma-de-barcelona",
+   "name": "Universitat Autònoma de Barcelona",
+   "zh": "巴塞罗那自治大学",
+   "aliases": [
+    "UAB"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "chulalongkorn-university",
+   "name": "Chulalongkorn University",
+   "zh": "朱拉隆功大学",
+   "aliases": [
+    "Chula"
+   ],
+   "country": "TH",
+   "timeZone": "Asia/Bangkok"
+  },
+  {
+   "id": "hamad-bin-khalifa-university",
+   "name": "Hamad Bin Khalifa University",
+   "zh": "哈马德·本·哈利法大学",
+   "aliases": [
+    "HBKU"
+   ],
+   "country": "QA",
+   "timeZone": "Asia/Qatar"
+  },
+  {
+   "id": "keio-university",
+   "name": "Keio University",
+   "local": "慶應義塾大学",
+   "zh": "庆应义塾大学",
+   "aliases": [
+    "Keio",
+    "庆应"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "massey-university",
+   "name": "Massey University",
+   "zh": "梅西大学",
+   "aliases": [
+    "Massey"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "hong-kong-baptist-university",
+   "name": "Hong Kong Baptist University",
+   "local": "香港浸會大學",
+   "zh": "香港浸会大学",
+   "aliases": [
+    "HKBU",
+    "浸大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "united-arab-emirates-university",
+   "name": "United Arab Emirates University",
+   "zh": "阿联酋大学",
+   "aliases": [
+    "UAEU"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "friedrich-alexander-universitat-erlangen-nurnberg",
+   "name": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+   "zh": "埃尔朗根-纽伦堡大学",
+   "aliases": [
+    "FAU"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "the-hebrew-university-of-jerusalem",
+   "name": "The Hebrew University of Jerusalem",
+   "zh": "耶路撒冷希伯来大学",
+   "aliases": [
+    "HUJI"
+   ],
+   "country": "IL",
+   "timeZone": "Asia/Jerusalem"
+  },
+  {
+   "id": "university-college-cork",
+   "name": "University College Cork",
+   "zh": "科克大学学院",
+   "aliases": [
+    "UCC"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "indian-institute-of-science",
+   "name": "Indian Institute of Science",
+   "zh": "印度科学理工学院",
+   "aliases": [
+    "IISc",
+    "Indian Institute of Science (IISc) Bangalore"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "indian-institute-of-technology-kanpur",
+   "name": "Indian Institute of Technology Kanpur",
+   "zh": "印度理工学院坎普尔分校",
+   "aliases": [
+    "IITK",
+    "IIT Kanpur"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "american-university-of-beirut",
+   "name": "American University of Beirut",
+   "zh": "贝鲁特美国大学",
+   "aliases": [
+    "AUB"
+   ],
+   "country": "LB",
+   "timeZone": "Asia/Beirut"
+  },
+  {
+   "id": "university-of-twente",
+   "name": "University of Twente",
+   "zh": "特文特大学",
+   "aliases": [
+    "UT",
+    "Twente"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "university-of-gothenburg",
+   "name": "University of Gothenburg",
+   "zh": "哥德堡大学",
+   "aliases": [
+    "GU",
+    "Gothenburg"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "universidad-autonoma-de-madrid",
+   "name": "Universidad Autónoma de Madrid",
+   "zh": "马德里自治大学",
+   "aliases": [
+    "UAM"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "deakin-university",
+   "name": "Deakin University",
+   "zh": "迪肯大学",
+   "aliases": [
+    "Deakin"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "university-of-florida",
+   "name": "University of Florida",
+   "zh": "佛罗里达大学",
+   "aliases": [
+    "UF"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-ottawa",
+   "name": "University of Ottawa",
+   "zh": "渥太华大学",
+   "aliases": [
+    "uOttawa"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "eberhard-karls-universitat-tubingen",
+   "name": "Eberhard Karls Universität Tübingen",
+   "zh": "图宾根大学",
+   "aliases": [
+    "Tübingen"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "griffith-university",
+   "name": "Griffith University",
+   "zh": "格里菲斯大学",
+   "aliases": [
+    "Griffith"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "university-of-strathclyde",
+   "name": "University of Strathclyde",
+   "zh": "斯特拉斯克莱德大学",
+   "aliases": [
+    "Strathclyde"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universidad-de-los-andes",
+   "name": "Universidad de los Andes",
+   "zh": "安第斯大学",
+   "aliases": [
+    "Uniandes"
+   ],
+   "country": "CO",
+   "timeZone": "America/Bogota"
+  },
+  {
+   "id": "university-of-lausanne",
+   "name": "University of Lausanne",
+   "zh": "洛桑大学",
+   "aliases": [
+    "UNIL"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "ecole-normale-superieure-de-lyon",
+   "name": "École Normale Supérieure de Lyon",
+   "zh": "里昂高等师范学院",
+   "aliases": [
+    "ENS Lyon"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "university-of-lisbon",
+   "name": "University of Lisbon",
+   "zh": "里斯本大学",
+   "aliases": [
+    "ULisboa"
+   ],
+   "country": "PT",
+   "timeZone": "Europe/Lisbon"
+  },
+  {
+   "id": "central-european-university",
+   "name": "Central European University",
+   "zh": "中欧大学",
+   "aliases": [
+    "CEU"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "queensland-university-of-technology",
+   "name": "Queensland University of Technology",
+   "zh": "昆士兰科技大学",
+   "aliases": [
+    "QUT"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "la-trobe-university",
+   "name": "La Trobe University",
+   "zh": "拉筹伯大学",
+   "aliases": [
+    "La Trobe"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "victoria-university-of-wellington",
+   "name": "Victoria University of Wellington",
+   "zh": "惠灵顿维多利亚大学",
+   "aliases": [
+    "VUW"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "the-university-of-newcastle-australia",
+   "name": "The University of Newcastle, Australia",
+   "zh": "纽卡斯尔大学（澳大利亚）",
+   "aliases": [
+    "UON"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "albert-ludwigs-universitat-freiburg",
+   "name": "Albert-Ludwigs-Universität Freiburg",
+   "zh": "弗莱堡大学",
+   "aliases": [
+    "Freiburg",
+    "Albert-Ludwigs-Universitaet Freiburg"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universite-paris-1-pantheon-sorbonne",
+   "name": "Université Paris 1 Panthéon-Sorbonne",
+   "zh": "巴黎第一大学",
+   "aliases": [
+    "Paris 1",
+    "先贤祠-索邦"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "university-of-surrey",
+   "name": "University of Surrey",
+   "zh": "萨里大学",
+   "aliases": [
+    "Surrey"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universite-libre-de-bruxelles",
+   "name": "Université libre de Bruxelles",
+   "zh": "布鲁塞尔自由大学（法语）",
+   "aliases": [
+    "ULB",
+    "Universite libre de Bruxelles"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "university-of-calgary",
+   "name": "University of Calgary",
+   "zh": "卡尔加里大学",
+   "aliases": [
+    "UCalgary"
+   ],
+   "country": "CA",
+   "timeZone": "America/Edmonton"
+  },
+  {
+   "id": "technical-university-of-darmstadt",
+   "name": "Technical University of Darmstadt",
+   "zh": "达姆施塔特工业大学",
+   "aliases": [
+    "TU Darmstadt"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-rochester",
+   "name": "University of Rochester",
+   "zh": "罗切斯特大学",
+   "aliases": [
+    "Rochester"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-california-irvine",
+   "name": "University of California, Irvine",
+   "zh": "加州大学尔湾分校",
+   "aliases": [
+    "UCI",
+    "UC Irvine"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "university-of-maryland-college-park",
+   "name": "University of Maryland, College Park",
+   "zh": "马里兰大学帕克分校",
+   "aliases": [
+    "UMD"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "maastricht-university",
+   "name": "Maastricht University",
+   "zh": "马斯特里赫特大学",
+   "aliases": [
+    "UM",
+    "Maastricht"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "university-of-minnesota",
+   "name": "University of Minnesota",
+   "zh": "明尼苏达大学",
+   "aliases": [
+    "UMN"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "university-of-porto",
+   "name": "University of Porto",
+   "zh": "波尔图大学",
+   "aliases": [
+    "UPorto"
+   ],
+   "country": "PT",
+   "timeZone": "Europe/Lisbon"
+  },
+  {
+   "id": "university-of-canterbury",
+   "name": "University of Canterbury",
+   "zh": "坎特伯雷大学",
+   "aliases": [
+    "UC",
+    "Canterbury",
+    "University of Canterbury | Te Whare Wānanga o Waitaha"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "american-university-of-sharjah",
+   "name": "American University of Sharjah",
+   "zh": "沙迦美国大学",
+   "aliases": [
+    "AUS"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "university-of-massachusetts-amherst",
+   "name": "University of Massachusetts Amherst",
+   "zh": "马萨诸塞大学阿默斯特分校",
+   "aliases": [
+    "UMass Amherst",
+    "UMass"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universiti-teknologi-petronas",
+   "name": "Universiti Teknologi PETRONAS",
+   "zh": "马来西亚国油科技大学",
+   "aliases": [
+    "UTP"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "university-of-gottingen",
+   "name": "University of Göttingen",
+   "zh": "哥廷根大学",
+   "aliases": [
+    "Göttingen"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universitat-pompeu-fabra",
+   "name": "Universitat Pompeu Fabra",
+   "zh": "庞培法布拉大学",
+   "aliases": [
+    "UPF"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "norwegian-university-of-science-and-technology",
+   "name": "Norwegian University of Science and Technology",
+   "zh": "挪威科技大学",
+   "aliases": [
+    "NTNU",
+    "Norwegian University of Science And Technology"
+   ],
+   "country": "NO",
+   "timeZone": "Europe/Oslo"
+  },
+  {
+   "id": "vanderbilt-university",
+   "name": "Vanderbilt University",
+   "zh": "范德堡大学",
+   "aliases": [
+    "Vanderbilt"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "singapore-university-of-technology-and-design",
+   "name": "Singapore University of Technology and Design",
+   "local": "新加坡科技设计大学",
+   "zh": "新加坡科技设计大学",
+   "aliases": [
+    "SUTD",
+    "新科大"
+   ],
+   "country": "SG",
+   "timeZone": "Asia/Singapore"
+  },
+  {
+   "id": "university-of-macau",
+   "name": "University of Macau",
+   "local": "澳門大學",
+   "zh": "澳门大学",
+   "aliases": [
+    "UM",
+    "澳大",
+    "UMac"
+   ],
+   "country": "MO",
+   "timeZone": "Asia/Macau"
+  },
+  {
+   "id": "university-of-virginia",
+   "name": "University of Virginia",
+   "zh": "弗吉尼亚大学",
+   "aliases": [
+    "UVA"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-cologne",
+   "name": "University of Cologne",
+   "zh": "科隆大学",
+   "aliases": [
+    "Cologne"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "dartmouth-college",
+   "name": "Dartmouth College",
+   "zh": "达特茅斯学院",
+   "aliases": [
+    "Dartmouth"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-milan",
+   "name": "University of Milan",
+   "zh": "米兰大学",
+   "aliases": [
+    "Unimi"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "taylor-s-university",
+   "name": "Taylor's University",
+   "zh": "泰莱大学",
+   "aliases": [
+    "Taylor's"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "charles-university",
+   "name": "Charles University",
+   "zh": "布拉格查理大学",
+   "aliases": [
+    "查理大学"
+   ],
+   "country": "CZ",
+   "timeZone": "Europe/Prague"
+  },
+  {
+   "id": "university-of-sussex",
+   "name": "University of Sussex",
+   "zh": "苏塞克斯大学",
+   "aliases": [
+    "Sussex"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-galway",
+   "name": "University of Galway",
+   "zh": "高威大学",
+   "aliases": [
+    "Galway"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "universitas-airlangga",
+   "name": "Universitas Airlangga",
+   "zh": "艾尔朗加大学",
+   "aliases": [
+    "Unair"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "universidade-estadual-de-campinas",
+   "name": "Universidade Estadual de Campinas",
+   "zh": "坎皮纳斯州立大学",
+   "aliases": [
+    "Unicamp"
+   ],
+   "country": "BR",
+   "timeZone": "America/Sao_Paulo"
+  },
+  {
+   "id": "university-of-antwerp",
+   "name": "University of Antwerp",
+   "zh": "安特卫普大学",
+   "aliases": [
+    "UAntwerpen"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "istanbul-technical-university",
+   "name": "Istanbul Technical University",
+   "zh": "伊斯坦布尔技术大学",
+   "aliases": [
+    "ITU"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "university-of-navarra",
+   "name": "University of Navarra",
+   "zh": "纳瓦拉大学",
+   "aliases": [
+    "UNAV"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "university-of-pittsburgh",
+   "name": "University of Pittsburgh",
+   "zh": "匹兹堡大学",
+   "aliases": [
+    "Pitt"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "ucsi-university",
+   "name": "UCSI University",
+   "zh": "思特雅大学",
+   "aliases": [
+    "UCSI"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "radboud-university",
+   "name": "Radboud University",
+   "zh": "拉德堡德大学",
+   "aliases": [
+    "Radboud"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "university-of-bergen",
+   "name": "University of Bergen",
+   "zh": "卑尔根大学",
+   "aliases": [
+    "UiB"
+   ],
+   "country": "NO",
+   "timeZone": "Europe/Oslo"
+  },
+  {
+   "id": "university-of-sharjah",
+   "name": "University of Sharjah",
+   "zh": "沙迦大学",
+   "aliases": [
+    "UOS"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "university-of-southern-denmark",
+   "name": "University of Southern Denmark",
+   "zh": "南丹麦大学",
+   "aliases": [
+    "SDU"
+   ],
+   "country": "DK",
+   "timeZone": "Europe/Copenhagen"
+  },
+  {
+   "id": "institut-teknologi-bandung",
+   "name": "Institut Teknologi Bandung",
+   "zh": "万隆理工学院",
+   "aliases": [
+    "ITB"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "university-of-aberdeen",
+   "name": "University of Aberdeen",
+   "zh": "阿伯丁大学",
+   "aliases": [
+    "Aberdeen"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "georgetown-university",
+   "name": "Georgetown University",
+   "zh": "乔治城大学",
+   "aliases": [
+    "Georgetown"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-warsaw",
+   "name": "University of Warsaw",
+   "zh": "华沙大学",
+   "aliases": [
+    "UW"
+   ],
+   "country": "PL",
+   "timeZone": "Europe/Warsaw"
+  },
+  {
+   "id": "swinburne-university-of-technology",
+   "name": "Swinburne University of Technology",
+   "zh": "斯威本科技大学",
+   "aliases": [
+    "Swinburne"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Melbourne"
+  },
+  {
+   "id": "university-of-johannesburg",
+   "name": "University of Johannesburg",
+   "zh": "约翰内斯堡大学",
+   "aliases": [
+    "UJ"
+   ],
+   "country": "ZA",
+   "timeZone": "Africa/Johannesburg"
+  },
+  {
+   "id": "universidad-nacional-de-colombia",
+   "name": "Universidad Nacional de Colombia",
+   "zh": "哥伦比亚国立大学",
+   "aliases": [
+    "UNAL"
+   ],
+   "country": "CO",
+   "timeZone": "America/Bogota"
+  },
+  {
+   "id": "university-of-waikato",
+   "name": "University of Waikato",
+   "zh": "怀卡托大学",
+   "aliases": [
+    "Waikato"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "vrije-universiteit-brussel",
+   "name": "Vrije Universiteit Brussel",
+   "zh": "布鲁塞尔自由大学（荷语）",
+   "aliases": [
+    "VUB"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "stellenbosch-university",
+   "name": "Stellenbosch University",
+   "zh": "斯泰伦博斯大学",
+   "aliases": [
+    "SU"
+   ],
+   "country": "ZA",
+   "timeZone": "Africa/Johannesburg"
+  },
+  {
+   "id": "dalhousie-university",
+   "name": "Dalhousie University",
+   "zh": "达尔豪斯大学",
+   "aliases": [
+    "Dal"
+   ],
+   "country": "CA",
+   "timeZone": "America/Halifax"
+  },
+  {
+   "id": "ulsan-national-institute-of-science-and-technology",
+   "name": "Ulsan National Institute of Science and Technology",
+   "local": "울산과학기술원",
+   "zh": "蔚山科学技术院",
+   "aliases": [
+    "UNIST"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "university-of-notre-dame",
+   "name": "University of Notre Dame",
+   "zh": "圣母大学",
+   "aliases": [
+    "Notre Dame",
+    "ND"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-the-witwatersrand",
+   "name": "University of the Witwatersrand",
+   "zh": "金山大学",
+   "aliases": [
+    "Wits",
+    "威特沃特斯兰德大学"
+   ],
+   "country": "ZA",
+   "timeZone": "Africa/Johannesburg"
+  },
+  {
+   "id": "universite-paris-cite",
+   "name": "Université Paris Cité",
+   "zh": "巴黎西岱大学",
+   "aliases": [
+    "Paris Cité"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "middle-east-technical-university",
+   "name": "Middle East Technical University",
+   "zh": "中东科技大学",
+   "aliases": [
+    "METU",
+    "ODTÜ"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "sultan-qaboos-university",
+   "name": "Sultan Qaboos University",
+   "zh": "苏丹卡布斯大学",
+   "aliases": [
+    "SQU"
+   ],
+   "country": "OM",
+   "timeZone": "Asia/Muscat"
+  },
+  {
+   "id": "linkoping-university",
+   "name": "Linköping University",
+   "zh": "林雪平大学",
+   "aliases": [
+    "LiU"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "kyung-hee-university",
+   "name": "Kyung Hee University",
+   "local": "경희대학교",
+   "zh": "庆熙大学",
+   "aliases": [
+    "Kyung Hee",
+    "KHU"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "university-of-tasmania",
+   "name": "University of Tasmania",
+   "zh": "塔斯马尼亚大学",
+   "aliases": [
+    "UTAS"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Hobart"
+  },
+  {
+   "id": "simon-fraser-university",
+   "name": "Simon Fraser University",
+   "zh": "西蒙弗雷泽大学",
+   "aliases": [
+    "SFU"
+   ],
+   "country": "CA",
+   "timeZone": "America/Vancouver"
+  },
+  {
+   "id": "the-university-of-arizona",
+   "name": "The University of Arizona",
+   "zh": "亚利桑那大学",
+   "aliases": [
+    "UArizona"
+   ],
+   "country": "US",
+   "timeZone": "America/Phoenix"
+  },
+  {
+   "id": "rutgers-universitynew-brunswick",
+   "name": "Rutgers University–New Brunswick",
+   "zh": "罗格斯大学新布朗斯维克分校",
+   "aliases": [
+    "Rutgers"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universidad-carlos-iii-de-madrid",
+   "name": "Universidad Carlos III de Madrid",
+   "zh": "马德里卡洛斯三世大学",
+   "aliases": [
+    "UC3M",
+    "Universidad Carlos III de Madrid (UC3M)"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "university-of-leicester",
+   "name": "University of Leicester",
+   "zh": "莱斯特大学",
+   "aliases": [
+    "Leicester"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "bauman-moscow-state-technical-university",
+   "name": "Bauman Moscow State Technical University",
+   "zh": "鲍曼莫斯科国立技术大学",
+   "aliases": [
+    "BMSTU",
+    "Bauman"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "universitat-stuttgart",
+   "name": "Universität Stuttgart",
+   "zh": "斯图加特大学",
+   "aliases": [
+    "Stuttgart"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "north-carolina-state-university",
+   "name": "North Carolina State University",
+   "zh": "北卡罗来纳州立大学",
+   "aliases": [
+    "NC State",
+    "NCSU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-colorado-boulder",
+   "name": "University of Colorado Boulder",
+   "zh": "科罗拉多大学博尔德分校",
+   "aliases": [
+    "CU Boulder"
+   ],
+   "country": "US",
+   "timeZone": "America/Denver"
+  },
+  {
+   "id": "swansea-university",
+   "name": "Swansea University",
+   "zh": "斯旺西大学",
+   "aliases": [
+    "Swansea"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-delhi",
+   "name": "University of Delhi",
+   "zh": "德里大学",
+   "aliases": [
+    "DU"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "york-university",
+   "name": "York University",
+   "zh": "约克大学（加拿大）",
+   "aliases": [
+    "YorkU"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "heriot-watt-university",
+   "name": "Heriot-Watt University",
+   "zh": "赫瑞瓦特大学",
+   "aliases": [
+    "Heriot-Watt",
+    "HWU"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "case-western-reserve-university",
+   "name": "Case Western Reserve University",
+   "zh": "凯斯西储大学",
+   "aliases": [
+    "CWRU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-jordan",
+   "name": "University of Jordan",
+   "zh": "约旦大学",
+   "aliases": [
+    "UJ"
+   ],
+   "country": "JO",
+   "timeZone": "Asia/Amman"
+  },
+  {
+   "id": "university-of-pretoria",
+   "name": "University of Pretoria",
+   "zh": "比勒陀利亚大学",
+   "aliases": [
+    "UP",
+    "Tuks"
+   ],
+   "country": "ZA",
+   "timeZone": "Africa/Johannesburg"
+  },
+  {
+   "id": "aalborg-university",
+   "name": "Aalborg University",
+   "zh": "奥尔堡大学",
+   "aliases": [
+    "AAU"
+   ],
+   "country": "DK",
+   "timeZone": "Europe/Copenhagen"
+  },
+  {
+   "id": "jagiellonian-university",
+   "name": "Jagiellonian University",
+   "zh": "雅盖隆大学",
+   "aliases": [
+    "UJ",
+    "Jagiellonian"
+   ],
+   "country": "PL",
+   "timeZone": "Europe/Warsaw"
+  },
+  {
+   "id": "koc-university",
+   "name": "Koç University",
+   "zh": "科奇大学",
+   "aliases": [
+    "Koç"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "universitat-innsbruck",
+   "name": "Universität Innsbruck",
+   "zh": "因斯布鲁克大学",
+   "aliases": [
+    "Innsbruck"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "technion-israel-institute-of-technology",
+   "name": "Technion - Israel Institute of Technology",
+   "zh": "以色列理工学院",
+   "aliases": [
+    "Technion"
+   ],
+   "country": "IL",
+   "timeZone": "Asia/Jerusalem"
+  },
+  {
+   "id": "indian-institute-of-technology-roorkee",
+   "name": "Indian Institute of Technology Roorkee",
+   "zh": "印度理工学院鲁尔基分校",
+   "aliases": [
+    "IITR",
+    "IIT Roorkee"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "universidade-nova-de-lisboa",
+   "name": "Universidade Nova de Lisboa",
+   "zh": "里斯本新大学",
+   "aliases": [
+    "NOVA"
+   ],
+   "country": "PT",
+   "timeZone": "Europe/Lisbon"
+  },
+  {
+   "id": "l-n-gumilyov-eurasian-national-university",
+   "name": "L.N. Gumilyov Eurasian National University",
+   "zh": "欧亚国立大学",
+   "aliases": [
+    "ENU"
+   ],
+   "country": "KZ",
+   "timeZone": "Asia/Almaty"
+  },
+  {
+   "id": "tufts-university",
+   "name": "Tufts University",
+   "zh": "塔夫茨大学",
+   "aliases": [
+    "Tufts"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-miami",
+   "name": "University of Miami",
+   "zh": "迈阿密大学",
+   "aliases": [
+    "UM",
+    "Miami"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-pisa",
+   "name": "University of Pisa",
+   "zh": "比萨大学",
+   "aliases": [
+    "Unipi"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "university-of-coimbra",
+   "name": "University of Coimbra",
+   "zh": "科英布拉大学",
+   "aliases": [
+    "UC",
+    "Coimbra"
+   ],
+   "country": "PT",
+   "timeZone": "Europe/Lisbon"
+  },
+  {
+   "id": "university-of-rome-tor-vergata",
+   "name": "University of Rome \"Tor Vergata\"",
+   "zh": "罗马第二大学",
+   "aliases": [
+    "Tor Vergata"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "bogazici-university",
+   "name": "Boğaziçi University",
+   "zh": "海峡大学",
+   "aliases": [
+    "Boğaziçi",
+    "Bogazici",
+    "博阿齐奇大学"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "mahidol-university",
+   "name": "Mahidol University",
+   "zh": "玛希隆大学",
+   "aliases": [
+    "Mahidol"
+   ],
+   "country": "TH",
+   "timeZone": "Asia/Bangkok"
+  },
+  {
+   "id": "universiti-brunei-darussalam",
+   "name": "Universiti Brunei Darussalam",
+   "zh": "文莱大学",
+   "aliases": [
+    "UBD"
+   ],
+   "country": "BN",
+   "timeZone": "Asia/Brunei"
+  },
+  {
+   "id": "abu-dhabi-university",
+   "name": "Abu Dhabi University",
+   "zh": "阿布扎比大学",
+   "aliases": [
+    "ADU"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "indian-institute-of-technology-guwahati",
+   "name": "Indian Institute of Technology Guwahati",
+   "zh": "印度理工学院古瓦哈提分校",
+   "aliases": [
+    "IITG",
+    "IIT Guwahati"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "satbayev-university",
+   "name": "Satbayev University",
+   "zh": "萨特巴耶夫大学",
+   "aliases": [
+    "Satbayev"
+   ],
+   "country": "KZ",
+   "timeZone": "Asia/Almaty"
+  },
+  {
+   "id": "university-of-tsukuba",
+   "name": "University of Tsukuba",
+   "local": "筑波大学",
+   "zh": "筑波大学",
+   "aliases": [
+    "Tsukuba",
+    "筑大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "brunel-university-of-london",
+   "name": "Brunel University of London",
+   "zh": "布鲁内尔大学",
+   "aliases": [
+    "Brunel"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "birkbeck-university-of-london",
+   "name": "Birkbeck, University of London",
+   "zh": "伦敦大学伯贝克学院",
+   "aliases": [
+    "Birkbeck"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "sciences-po",
+   "name": "Sciences Po",
+   "zh": "巴黎政治学院",
+   "aliases": [
+    "巴黎政治大学"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "sunway-university",
+   "name": "Sunway University",
+   "zh": "双威大学",
+   "aliases": [
+    "Sunway"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "pontificia-universidad-catolica-del-peru",
+   "name": "Pontificia Universidad Católica del Perú",
+   "zh": "秘鲁天主教大学",
+   "aliases": [
+    "PUCP",
+    "Pontificia Universidad Catolica del Peru"
+   ],
+   "country": "PE",
+   "timeZone": "America/Lima"
+  },
+  {
+   "id": "sabanci-university",
+   "name": "Sabanci University",
+   "zh": "萨班哲大学",
+   "aliases": [
+    "Sabancı"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "rudn-university",
+   "name": "RUDN University",
+   "zh": "俄罗斯人民友谊大学",
+   "aliases": [
+    "RUDN"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "indiana-university-bloomington",
+   "name": "Indiana University Bloomington",
+   "zh": "印第安纳大学伯明顿分校",
+   "aliases": [
+    "IU",
+    "Indiana"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "university-of-oulu",
+   "name": "University of Oulu",
+   "zh": "奥卢大学",
+   "aliases": [
+    "Oulu"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "city-st-george-s-university-of-london",
+   "name": "City St George's, University of London",
+   "zh": "伦敦城市圣乔治大学",
+   "aliases": [
+    "City",
+    "City University of London",
+    "伦敦城市大学",
+    "City St George’s, University of London"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "cairo-university",
+   "name": "Cairo University",
+   "zh": "开罗大学",
+   "aliases": [
+    "CU"
+   ],
+   "country": "EG",
+   "timeZone": "Africa/Cairo"
+  },
+  {
+   "id": "universidad-politecnica-de-madrid",
+   "name": "Universidad Politécnica de Madrid",
+   "zh": "马德里理工大学",
+   "aliases": [
+    "UPM"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "universite-de-liege",
+   "name": "Université de Liège",
+   "zh": "列日大学",
+   "aliases": [
+    "ULiège"
+   ],
+   "country": "BE",
+   "timeZone": "Europe/Brussels"
+  },
+  {
+   "id": "virginia-polytechnic-institute-and-state-university",
+   "name": "Virginia Polytechnic Institute and State University",
+   "zh": "弗吉尼亚理工大学",
+   "aliases": [
+    "Virginia Tech",
+    "VT"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universidade-federal-do-rio-de-janeiro",
+   "name": "Universidade Federal do Rio de Janeiro",
+   "zh": "里约热内卢联邦大学",
+   "aliases": [
+    "UFRJ"
+   ],
+   "country": "BR",
+   "timeZone": "America/Sao_Paulo"
+  },
+  {
+   "id": "university-of-tartu",
+   "name": "University of Tartu",
+   "zh": "塔尔图大学",
+   "aliases": [
+    "Tartu"
+   ],
+   "country": "EE",
+   "timeZone": "Europe/Tallinn"
+  },
+  {
+   "id": "university-of-tehran",
+   "name": "University of Tehran",
+   "zh": "德黑兰大学",
+   "aliases": [
+    "UT"
+   ],
+   "country": "IR",
+   "timeZone": "Asia/Tehran"
+  },
+  {
+   "id": "university-of-illinois-chicago",
+   "name": "University of Illinois Chicago",
+   "zh": "伊利诺伊大学芝加哥分校",
+   "aliases": [
+    "UIC"
+   ],
+   "country": "US",
+   "timeZone": "America/Chicago"
+  },
+  {
+   "id": "university-of-munster",
+   "name": "University of Münster",
+   "zh": "明斯特大学",
+   "aliases": [
+    "Münster"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-victoria",
+   "name": "University of Victoria",
+   "zh": "维多利亚大学（加拿大）",
+   "aliases": [
+    "UVic"
+   ],
+   "country": "CA",
+   "timeZone": "America/Vancouver"
+  },
+  {
+   "id": "western-sydney-university",
+   "name": "Western Sydney University",
+   "zh": "西悉尼大学",
+   "aliases": [
+    "WSU"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "flinders-university",
+   "name": "Flinders University",
+   "zh": "弗林德斯大学",
+   "aliases": [
+    "Flinders"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Adelaide"
+  },
+  {
+   "id": "goethe-university-frankfurt-am-main",
+   "name": "Goethe-University Frankfurt am Main",
+   "zh": "法兰克福大学",
+   "aliases": [
+    "Goethe University"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-luxembourg",
+   "name": "University of Luxembourg",
+   "zh": "卢森堡大学",
+   "aliases": [
+    "Uni.lu"
+   ],
+   "country": "LU",
+   "timeZone": "Europe/Luxembourg"
+  },
+  {
+   "id": "national-technical-university-of-athens",
+   "name": "National Technical University of Athens",
+   "zh": "雅典国立技术大学",
+   "aliases": [
+    "NTUA"
+   ],
+   "country": "GR",
+   "timeZone": "Europe/Athens"
+  },
+  {
+   "id": "gwangju-institute-of-science-and-technology",
+   "name": "Gwangju Institute of Science and Technology",
+   "local": "광주과학기술원",
+   "zh": "光州科学技术院",
+   "aliases": [
+    "GIST"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "national-taiwan-university-of-science-and-technology",
+   "name": "National Taiwan University of Science and Technology",
+   "local": "國立臺灣科技大學",
+   "zh": "国立台湾科技大学",
+   "aliases": [
+    "Taiwan Tech",
+    "NTUST",
+    "台科大"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "george-washington-university",
+   "name": "George Washington University",
+   "zh": "乔治华盛顿大学",
+   "aliases": [
+    "GWU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "quaid-i-azam-university",
+   "name": "Quaid-i-Azam University",
+   "zh": "真纳大学",
+   "aliases": [
+    "QAU"
+   ],
+   "country": "PK",
+   "timeZone": "Asia/Karachi"
+  },
+  {
+   "id": "university-of-east-anglia",
+   "name": "University of East Anglia",
+   "zh": "东英吉利大学",
+   "aliases": [
+    "UEA"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "national-university-of-sciences-and-technology-islamabad",
+   "name": "National University of Sciences and Technology, Islamabad",
+   "zh": "巴基斯坦国立科技大学",
+   "aliases": [
+    "NUST",
+    "National University of Sciences & Technology (NUST) Islamabad"
+   ],
+   "country": "PK",
+   "timeZone": "Asia/Karachi"
+  },
+  {
+   "id": "daegu-gyeongbuk-institute-of-science-and-technology",
+   "name": "Daegu Gyeongbuk Institute of Science and Technology",
+   "local": "대구경북과학기술원",
+   "zh": "大邱庆北科学技术院",
+   "aliases": [
+    "DGIST"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "northeastern-university",
+   "name": "Northeastern University",
+   "zh": "东北大学（美国）",
+   "aliases": [
+    "Northeastern",
+    "NEU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universite-grenoble-alpes",
+   "name": "Université Grenoble Alpes",
+   "zh": "格勒诺布尔-阿尔卑斯大学",
+   "aliases": [
+    "UGA"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "universita-cattolica-del-sacro-cuore",
+   "name": "Università Cattolica del Sacro Cuore",
+   "zh": "圣心天主教大学",
+   "aliases": [
+    "Cattolica"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "university-of-limerick",
+   "name": "University of Limerick",
+   "zh": "利默里克大学",
+   "aliases": [
+    "UL"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "lut-university",
+   "name": "LUT University",
+   "zh": "拉彭兰塔-拉赫蒂理工大学",
+   "aliases": [
+    "LUT"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "saint-petersburg-state-university",
+   "name": "Saint Petersburg State University",
+   "zh": "圣彼得堡国立大学",
+   "aliases": [
+    "SPbU"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "sharif-university-of-technology",
+   "name": "Sharif University of Technology",
+   "zh": "谢里夫理工大学",
+   "aliases": [
+    "Sharif"
+   ],
+   "country": "IR",
+   "timeZone": "Asia/Tehran"
+  },
+  {
+   "id": "the-american-university-in-cairo",
+   "name": "The American University in Cairo",
+   "zh": "开罗美国大学",
+   "aliases": [
+    "AUC"
+   ],
+   "country": "EG",
+   "timeZone": "Africa/Cairo"
+  },
+  {
+   "id": "pontificia-universidad-javeriana",
+   "name": "Pontificia Universidad Javeriana",
+   "zh": "哈韦里亚纳天主教大学",
+   "aliases": [
+    "Javeriana"
+   ],
+   "country": "CO",
+   "timeZone": "America/Bogota"
+  },
+  {
+   "id": "universita-degli-studi-di-pavia",
+   "name": "Università degli Studi di Pavia",
+   "zh": "帕维亚大学",
+   "aliases": [
+    "Unipv"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "ajman-university",
+   "name": "Ajman University",
+   "zh": "阿治曼大学",
+   "aliases": [
+    "Ajman"
+   ],
+   "country": "AE",
+   "timeZone": "Asia/Dubai"
+  },
+  {
+   "id": "macau-university-of-science-and-technology",
+   "name": "Macau University of Science and Technology",
+   "local": "澳門科技大學",
+   "zh": "澳门科技大学",
+   "aliases": [
+    "MUST",
+    "澳科大"
+   ],
+   "country": "MO",
+   "timeZone": "Asia/Macau"
+  },
+  {
+   "id": "sejong-university",
+   "name": "Sejong University",
+   "local": "세종대학교",
+   "zh": "世宗大学",
+   "aliases": [
+    "Sejong"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "university-of-california-riverside",
+   "name": "University of California, Riverside",
+   "zh": "加州大学河滨分校",
+   "aliases": [
+    "UCR"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "university-of-turku",
+   "name": "University of Turku",
+   "zh": "图尔库大学",
+   "aliases": [
+    "UTU"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "university-of-naples-federico-ii",
+   "name": "University of Naples - Federico II",
+   "zh": "那不勒斯费德里科二世大学",
+   "aliases": [
+    "Federico II"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "national-and-kapodistrian-university-of-athens",
+   "name": "National and Kapodistrian University of Athens",
+   "zh": "雅典大学",
+   "aliases": [
+    "NKUA"
+   ],
+   "country": "GR",
+   "timeZone": "Europe/Athens"
+  },
+  {
+   "id": "ruhr-universitat-bochum",
+   "name": "Ruhr-Universität Bochum",
+   "zh": "波鸿鲁尔大学",
+   "aliases": [
+    "RUB"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-the-philippines",
+   "name": "University of the Philippines",
+   "zh": "菲律宾大学",
+   "aliases": [
+    "UP"
+   ],
+   "country": "PH",
+   "timeZone": "Asia/Manila"
+  },
+  {
+   "id": "university-of-turin",
+   "name": "University of Turin",
+   "zh": "都灵大学",
+   "aliases": [
+    "UniTo"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "inti-international-university",
+   "name": "INTI International University",
+   "zh": "英迪国际大学",
+   "aliases": [
+    "INTI"
+   ],
+   "country": "MY",
+   "timeZone": "Asia/Kuala_Lumpur"
+  },
+  {
+   "id": "the-education-university-of-hong-kong",
+   "name": "The Education University of Hong Kong",
+   "local": "香港教育大學",
+   "zh": "香港教育大学",
+   "aliases": [
+    "EdUHK",
+    "教大"
+   ],
+   "country": "HK",
+   "timeZone": "Asia/Hong_Kong"
+  },
+  {
+   "id": "dublin-city-university",
+   "name": "Dublin City University",
+   "zh": "都柏林城市大学",
+   "aliases": [
+    "DCU"
+   ],
+   "country": "IE",
+   "timeZone": "Europe/Dublin"
+  },
+  {
+   "id": "graz-university-of-technology",
+   "name": "Graz University of Technology",
+   "zh": "格拉茨技术大学",
+   "aliases": [
+    "TU Graz"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "university-of-florence",
+   "name": "University of Florence",
+   "zh": "佛罗伦萨大学",
+   "aliases": [
+    "UniFI"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "oxford-brookes-university",
+   "name": "Oxford Brookes University",
+   "zh": "牛津布鲁克斯大学",
+   "aliases": [
+    "Brookes"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "singapore-management-university",
+   "name": "Singapore Management University",
+   "local": "新加坡管理大学",
+   "zh": "新加坡管理大学",
+   "aliases": [
+    "SMU",
+    "新管大"
+   ],
+   "country": "SG",
+   "timeZone": "Asia/Singapore"
+  },
+  {
+   "id": "university-of-saskatchewan",
+   "name": "University of Saskatchewan",
+   "zh": "萨斯喀彻温大学",
+   "aliases": [
+    "USask"
+   ],
+   "country": "CA",
+   "timeZone": "America/Regina"
+  },
+  {
+   "id": "university-of-southern-queensland",
+   "name": "University of Southern Queensland",
+   "zh": "南昆士兰大学",
+   "aliases": [
+    "UniSQ",
+    "USQ"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "university-of-kent",
+   "name": "University of Kent",
+   "zh": "肯特大学",
+   "aliases": [
+    "Kent"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "aston-university",
+   "name": "Aston University",
+   "zh": "阿斯顿大学",
+   "aliases": [
+    "Aston"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-at-buffalo-suny",
+   "name": "University at Buffalo SUNY",
+   "zh": "纽约州立大学布法罗分校",
+   "aliases": [
+    "UB",
+    "Buffalo"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "ipb-university",
+   "name": "IPB University",
+   "zh": "茂物农业大学",
+   "aliases": [
+    "IPB",
+    "Bogor Agricultural University"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "lincoln-university",
+   "name": "Lincoln University",
+   "zh": "林肯大学（新西兰）",
+   "aliases": [
+    "Lincoln"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "prince-mohammad-bin-fahd-university",
+   "name": "Prince Mohammad Bin Fahd University",
+   "zh": "穆罕默德·本·法赫德亲王大学",
+   "aliases": [
+    "PMU"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "murdoch-university",
+   "name": "Murdoch University",
+   "zh": "莫道克大学",
+   "aliases": [
+    "Murdoch"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Perth"
+  },
+  {
+   "id": "hse-university",
+   "name": "HSE University",
+   "zh": "高等经济大学",
+   "aliases": [
+    "HSE"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "national-taiwan-normal-university",
+   "name": "National Taiwan Normal University",
+   "local": "國立臺灣師範大學",
+   "zh": "国立台湾师范大学",
+   "aliases": [
+    "NTNU",
+    "台师大",
+    "师大"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "universitat-konstanz",
+   "name": "Universität Konstanz",
+   "zh": "康斯坦茨大学",
+   "aliases": [
+    "Konstanz"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universitat-mannheim",
+   "name": "Universität Mannheim",
+   "zh": "曼海姆大学",
+   "aliases": [
+    "Mannheim"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-aveiro",
+   "name": "University of Aveiro",
+   "zh": "阿威罗大学",
+   "aliases": [
+    "UA",
+    "Aveiro"
+   ],
+   "country": "PT",
+   "timeZone": "Europe/Lisbon"
+  },
+  {
+   "id": "tilburg-university",
+   "name": "Tilburg University",
+   "zh": "蒂尔堡大学",
+   "aliases": [
+    "Tilburg"
+   ],
+   "country": "NL",
+   "timeZone": "Europe/Amsterdam"
+  },
+  {
+   "id": "julius-maximilians-universitat-wurzburg",
+   "name": "Julius-Maximilians-Universität Würzburg",
+   "zh": "维尔茨堡大学",
+   "aliases": [
+    "JMU",
+    "Würzburg"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "auckland-university-of-technology",
+   "name": "Auckland University of Technology",
+   "zh": "奥克兰理工大学",
+   "aliases": [
+    "AUT"
+   ],
+   "country": "NZ",
+   "timeZone": "Pacific/Auckland"
+  },
+  {
+   "id": "chung-ang-university",
+   "name": "Chung-Ang University",
+   "local": "중앙대학교",
+   "zh": "中央大学（韩国）",
+   "aliases": [
+    "CAU",
+    "中央大学"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "czech-technical-university-in-prague",
+   "name": "Czech Technical University in Prague",
+   "zh": "捷克理工大学",
+   "aliases": [
+    "CTU"
+   ],
+   "country": "CZ",
+   "timeZone": "Europe/Prague"
+  },
+  {
+   "id": "universitat-politecnica-de-catalunya",
+   "name": "Universitat Politècnica de Catalunya",
+   "zh": "加泰罗尼亚理工大学",
+   "aliases": [
+    "UPC",
+    "Universitat Politècnica de Catalunya · BarcelonaTech"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "universitat-politecnica-de-valencia",
+   "name": "Universitat Politècnica de València",
+   "zh": "瓦伦西亚理工大学",
+   "aliases": [
+    "UPV"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "central-queensland-university",
+   "name": "Central Queensland University",
+   "zh": "中央昆士兰大学",
+   "aliases": [
+    "CQU",
+    "CQUniversity"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "tampere-university",
+   "name": "Tampere University",
+   "zh": "坦佩雷大学",
+   "aliases": [
+    "Tampere"
+   ],
+   "country": "FI",
+   "timeZone": "Europe/Helsinki"
+  },
+  {
+   "id": "university-of-essex",
+   "name": "University of Essex",
+   "zh": "埃塞克斯大学",
+   "aliases": [
+    "Essex"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "james-cook-university",
+   "name": "James Cook University",
+   "zh": "詹姆斯库克大学",
+   "aliases": [
+    "JCU"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Brisbane"
+  },
+  {
+   "id": "national-sun-yat-sen-university",
+   "name": "National Sun Yat-sen University",
+   "local": "國立中山大學",
+   "zh": "国立中山大学",
+   "aliases": [
+    "NSYSU",
+    "台湾中山大学"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "umea-university",
+   "name": "Umeå University",
+   "zh": "于默奥大学",
+   "aliases": [
+    "Umeå",
+    "Umea",
+    "Umea University"
+   ],
+   "country": "SE",
+   "timeZone": "Europe/Stockholm"
+  },
+  {
+   "id": "university-of-trento",
+   "name": "University of Trento",
+   "zh": "特伦托大学",
+   "aliases": [
+    "UniTrento"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "aix-marseille-university",
+   "name": "Aix-Marseille University",
+   "zh": "艾克斯-马赛大学",
+   "aliases": [
+    "AMU"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "ie-university",
+   "name": "IE University",
+   "zh": "IE大学",
+   "aliases": [
+    "IE"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "university-of-dundee",
+   "name": "University of Dundee",
+   "zh": "邓迪大学",
+   "aliases": [
+    "Dundee"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "university-of-granada",
+   "name": "University of Granada",
+   "zh": "格拉纳达大学",
+   "aliases": [
+    "UGR"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "jordan-university-of-science-and-technology",
+   "name": "Jordan University of Science and Technology",
+   "zh": "约旦科技大学",
+   "aliases": [
+    "JUST",
+    "Jordan University of Science & Technology"
+   ],
+   "country": "JO",
+   "timeZone": "Asia/Amman"
+  },
+  {
+   "id": "pusan-national-university",
+   "name": "Pusan National University",
+   "local": "부산대학교",
+   "zh": "釜山大学",
+   "aliases": [
+    "PNU",
+    "釜山国立大学"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "universitat-de-valencia",
+   "name": "Universitat de València",
+   "zh": "瓦伦西亚大学",
+   "aliases": [
+    "UV",
+    "Universitat de Valencia"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "shoolini-university-of-biotechnology-and-management-sciences",
+   "name": "Shoolini University of Biotechnology and Management Sciences",
+   "zh": "舒里尼大学",
+   "aliases": [
+    "Shoolini"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "bilkent-university",
+   "name": "Bilkent University",
+   "zh": "比尔肯特大学",
+   "aliases": [
+    "Bilkent"
+   ],
+   "country": "TR",
+   "timeZone": "Europe/Istanbul"
+  },
+  {
+   "id": "masaryk-university",
+   "name": "Masaryk University",
+   "zh": "马萨里克大学",
+   "aliases": [
+    "MUNI"
+   ],
+   "country": "CZ",
+   "timeZone": "Europe/Prague"
+  },
+  {
+   "id": "universite-de-strasbourg",
+   "name": "Université de Strasbourg",
+   "zh": "斯特拉斯堡大学",
+   "aliases": [
+    "Unistra"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "usi-universita-della-svizzera-italiana",
+   "name": "USI – Università della Svizzera italiana",
+   "zh": "瑞士意大利语区大学",
+   "aliases": [
+    "USI",
+    "USI - Università della Svizzera italiana"
+   ],
+   "country": "CH",
+   "timeZone": "Europe/Zurich"
+  },
+  {
+   "id": "johannes-kepler-university-linz",
+   "name": "Johannes Kepler University Linz",
+   "zh": "林茨大学",
+   "aliases": [
+    "JKU"
+   ],
+   "country": "AT",
+   "timeZone": "Europe/Vienna"
+  },
+  {
+   "id": "soas-university-of-london",
+   "name": "SOAS University of London",
+   "zh": "伦敦大学亚非学院",
+   "aliases": [
+    "SOAS"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "tashkent-institute-of-irrigation-and-agricultural-mechanization-engineers",
+   "name": "Tashkent Institute of Irrigation and Agricultural Mechanization Engineers",
+   "zh": "塔什干灌溉与农业机械化工程师学院",
+   "aliases": [
+    "TIIAME",
+    "Tashkent Institute of Irrigation and Agricultural Mechanization Engineers - National Research University"
+   ],
+   "country": "UZ",
+   "timeZone": "Asia/Tashkent"
+  },
+  {
+   "id": "university-of-california-santa-cruz",
+   "name": "University of California, Santa Cruz",
+   "zh": "加州大学圣克鲁兹分校",
+   "aliases": [
+    "UCSC"
+   ],
+   "country": "US",
+   "timeZone": "America/Los_Angeles"
+  },
+  {
+   "id": "university-of-connecticut",
+   "name": "University of Connecticut",
+   "zh": "康涅狄格大学",
+   "aliases": [
+    "UConn"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "universidad-de-costa-rica",
+   "name": "Universidad de Costa Rica",
+   "zh": "哥斯达黎加大学",
+   "aliases": [
+    "UCR"
+   ],
+   "country": "CR",
+   "timeZone": "America/Costa_Rica"
+  },
+  {
+   "id": "universita-vita-salute-san-raffaele",
+   "name": "Università Vita-Salute San Raffaele",
+   "zh": "圣拉斐尔生命健康大学",
+   "aliases": [
+    "UniSR"
+   ],
+   "country": "IT",
+   "timeZone": "Europe/Rome"
+  },
+  {
+   "id": "vilnius-university",
+   "name": "Vilnius University",
+   "zh": "维尔纽斯大学",
+   "aliases": [
+    "VU"
+   ],
+   "country": "LT",
+   "timeZone": "Europe/Vilnius"
+  },
+  {
+   "id": "kazan-volga-region-federal-university",
+   "name": "Kazan (Volga Region) Federal University",
+   "zh": "喀山联邦大学",
+   "aliases": [
+    "KFU",
+    "Kazan (Volga region) Federal University"
+   ],
+   "country": "RU",
+   "timeZone": "Europe/Moscow"
+  },
+  {
+   "id": "stony-brook-university-state-university-of-new-york",
+   "name": "Stony Brook University, State University of New York",
+   "zh": "纽约州立大学石溪分校",
+   "aliases": [
+    "Stony Brook",
+    "SBU"
+   ],
+   "country": "US",
+   "timeZone": "America/New_York"
+  },
+  {
+   "id": "anna-university",
+   "name": "Anna University",
+   "zh": "安娜大学",
+   "aliases": [
+    "Anna"
+   ],
+   "country": "IN",
+   "timeZone": "Asia/Kolkata"
+  },
+  {
+   "id": "leibniz-university-hannover",
+   "name": "Leibniz University Hannover",
+   "zh": "汉诺威大学",
+   "aliases": [
+    "LUH"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "university-of-bayreuth",
+   "name": "University of Bayreuth",
+   "zh": "拜罗伊特大学",
+   "aliases": [
+    "Bayreuth"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universite-de-montpellier",
+   "name": "Université de Montpellier",
+   "zh": "蒙彼利埃大学",
+   "aliases": [
+    "Montpellier"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "imam-abdulrahman-bin-faisal-university",
+   "name": "Imam Abdulrahman Bin Faisal University",
+   "zh": "伊玛目阿卜杜勒拉赫曼·本·费萨尔大学",
+   "aliases": [
+    "IAU"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "universidad-nacional-de-la-plata",
+   "name": "Universidad Nacional de La Plata",
+   "zh": "拉普拉塔国立大学",
+   "aliases": [
+    "UNLP"
+   ],
+   "country": "AR",
+   "timeZone": "America/Argentina/Buenos_Aires"
+  },
+  {
+   "id": "universitat-ramon-llull",
+   "name": "Universitat Ramon Llull",
+   "zh": "拉蒙鲁尔大学",
+   "aliases": [
+    "URL"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "lebanese-american-university",
+   "name": "Lebanese American University",
+   "zh": "黎巴嫩美国大学",
+   "aliases": [
+    "LAU"
+   ],
+   "country": "LB",
+   "timeZone": "Asia/Beirut"
+  },
+  {
+   "id": "university-of-canberra",
+   "name": "University of Canberra",
+   "zh": "堪培拉大学",
+   "aliases": [
+    "UC"
+   ],
+   "country": "AU",
+   "timeZone": "Australia/Sydney"
+  },
+  {
+   "id": "hiroshima-university",
+   "name": "Hiroshima University",
+   "local": "広島大学",
+   "zh": "广岛大学",
+   "aliases": [
+    "Hiroshima",
+    "广大"
+   ],
+   "country": "JP",
+   "timeZone": "Asia/Tokyo"
+  },
+  {
+   "id": "kyungpook-national-university",
+   "name": "Kyungpook National University",
+   "local": "경북대학교",
+   "zh": "庆北大学",
+   "aliases": [
+    "KNU"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "amirkabir-university-of-technology",
+   "name": "Amirkabir University of Technology",
+   "zh": "阿米尔卡比尔理工大学",
+   "aliases": [
+    "AUT",
+    "Tehran Polytechnic"
+   ],
+   "country": "IR",
+   "timeZone": "Asia/Tehran"
+  },
+  {
+   "id": "royal-holloway-university-of-london",
+   "name": "Royal Holloway, University of London",
+   "zh": "伦敦大学皇家霍洛威学院",
+   "aliases": [
+    "RHUL",
+    "Royal Holloway"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "universidad-de-sevilla",
+   "name": "Universidad de Sevilla",
+   "zh": "塞维利亚大学",
+   "aliases": [
+    "US"
+   ],
+   "country": "ES",
+   "timeZone": "Europe/Madrid"
+  },
+  {
+   "id": "university-of-bordeaux",
+   "name": "University of Bordeaux",
+   "zh": "波尔多大学",
+   "aliases": [
+    "Bordeaux"
+   ],
+   "country": "FR",
+   "timeZone": "Europe/Paris"
+  },
+  {
+   "id": "ewha-womans-university",
+   "name": "Ewha Womans University",
+   "local": "이화여자대학교",
+   "zh": "梨花女子大学",
+   "aliases": [
+    "Ewha",
+    "梨大"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "novosibirsk-state-university",
+   "name": "Novosibirsk State University",
+   "zh": "新西伯利亚国立大学",
+   "aliases": [
+    "NSU"
+   ],
+   "country": "RU",
+   "timeZone": "Asia/Novosibirsk"
+  },
+  {
+   "id": "prince-sultan-university",
+   "name": "Prince Sultan University",
+   "zh": "苏丹王子大学",
+   "aliases": [
+    "PSU"
+   ],
+   "country": "SA",
+   "timeZone": "Asia/Riyadh"
+  },
+  {
+   "id": "national-taipei-university-of-technology",
+   "name": "National Taipei University of Technology",
+   "local": "國立臺北科技大學",
+   "zh": "国立台北科技大学",
+   "aliases": [
+    "Taipei Tech",
+    "NTUT",
+    "北科大"
+   ],
+   "country": "TW",
+   "timeZone": "Asia/Taipei"
+  },
+  {
+   "id": "sogang-university",
+   "name": "Sogang University",
+   "local": "서강대학교",
+   "zh": "西江大学",
+   "aliases": [
+    "Sogang"
+   ],
+   "country": "KR",
+   "timeZone": "Asia/Seoul"
+  },
+  {
+   "id": "universitas-padjadjaran",
+   "name": "Universitas Padjadjaran",
+   "zh": "巴查查兰大学",
+   "aliases": [
+    "UNPAD"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "concordia-university",
+   "name": "Concordia University",
+   "zh": "康考迪亚大学",
+   "aliases": [
+    "Concordia"
+   ],
+   "country": "CA",
+   "timeZone": "America/Toronto"
+  },
+  {
+   "id": "institut-teknologi-sepuluh-nopember",
+   "name": "Institut Teknologi Sepuluh Nopember",
+   "zh": "泗水理工学院",
+   "aliases": [
+    "ITS"
+   ],
+   "country": "ID",
+   "timeZone": "Asia/Jakarta"
+  },
+  {
+   "id": "university-of-bradford",
+   "name": "University of Bradford",
+   "zh": "布拉德福德大学",
+   "aliases": [
+    "Bradford"
+   ],
+   "country": "GB",
+   "timeZone": "Europe/London"
+  },
+  {
+   "id": "johannes-gutenberg-university-mainz",
+   "name": "Johannes Gutenberg University Mainz",
+   "zh": "美因茨大学",
+   "aliases": [
+    "JGU",
+    "Johannes Gutenberg Universität Mainz"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  },
+  {
+   "id": "universitat-potsdam",
+   "name": "Universität Potsdam",
+   "zh": "波茨坦大学",
+   "aliases": [
+    "Potsdam"
+   ],
+   "country": "DE",
+   "timeZone": "Europe/Berlin"
+  }
+ ]
+}

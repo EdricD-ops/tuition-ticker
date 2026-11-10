@@ -1,0 +1,168 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/geist';
+@import '@fontsource/instrument-serif/400.css';
+@import '@fontsource/instrument-serif/400-italic.css';
+@import '@fontsource/tinos/400.css';
+@import '@fontsource/tinos/400-italic.css';
+@import '@fontsource/dm-mono/400.css';
+@import '@fontsource/dm-mono/500.css';
+
+/*
+ * Theme tokens: warm neutral grays. Dark is warm graphite, light is warm paper white.
+ * Colour is reserved for the live signal (green) and tuition bars (muted blue).
+ */
+:root {
+  --bg: #f5f3ef;
+  --surface: #fdfcfa;
+  --raised: #efece6;
+  --fg: #252523;
+  --fg-2: #57534d;
+  --muted: #8d877e;
+  --line: #e2ddd5;
+  --track: #e7e2da;
+  --bar: #4a6fa5;
+  --live: #16a34a;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #252523;
+    --surface: #2c2b28;
+    --raised: #34322f;
+    --fg: #f4f0eb;
+    --fg-2: #d6d0c8;
+    --muted: #9a948b;
+    --line: #413d39;
+    --track: #3a3733;
+    --bar: #6e93c8;
+    --live: #4ade80;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #252523;
+  --surface: #2c2b28;
+  --raised: #34322f;
+  --fg: #f4f0eb;
+  --fg-2: #d6d0c8;
+  --muted: #9a948b;
+  --line: #413d39;
+  --track: #3a3733;
+  --bar: #6e93c8;
+  --live: #4ade80;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-raised: var(--raised);
+  --color-fg: var(--fg);
+  --color-fg-2: var(--fg-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-track: var(--track);
+  --color-bar: var(--bar);
+  --color-live: var(--live);
+  --font-sans:
+    'Geist Variable', ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  /* Wordmark: Times New Roman where installed, Tinos (metric-compatible, bundled) elsewhere. */
+  --font-title: 'Times New Roman', Times, Tinos, 'Songti SC', 'STSong', serif;
+  --font-serif: 'Instrument Serif', ui-serif, Georgia, 'Songti SC', 'STSong', serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, 'PingFang SC', monospace;
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Small uppercase caption with generous tracking. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---- Motion ---------------------------------------------------------------------- */
+
+@keyframes digit-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75em);
+  }
+}
+@keyframes digit-out {
+  to {
+    opacity: 0;
+    transform: translateY(-0.75em);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Odometer slot: clips the digits sliding in and out without moving the baseline. */
+.digit-slot {
+  position: relative;
+  display: inline-block;
+  clip-path: inset(-0.12em -0.1em);
+}
+.digit-in {
+  animation: digit-in 350ms var(--ease-out-expo) both;
+}
+.digit-out {
+  animation: digit-out 350ms var(--ease-out-expo) both;
+}
+.rise {
+  animation: rise 500ms var(--ease-out-expo) both;
+}
+.grow {
+  transform-origin: left;
+  animation: grow 1100ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .digit-in,
+  .digit-out,
+  .rise,
+  .grow {
+    animation: none;
+  }
+  .digit-out {
+    display: none;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
