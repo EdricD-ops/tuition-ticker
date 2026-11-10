@@ -86,6 +86,14 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for formats and workflow.
 
 If it made you pay a little more attention in class, you can buy me a coffee on [Afdian](https://afdian.com/a/edric0108) (WeChat Pay / Alipay). It keeps the project free and ad-free. The coffee icon at the bottom left of the site opens it too.
 
+### Sponsors
+
+Thank you to the "attentive student" sponsors (the ¥50 tier). Those who'd like to be named are listed here:
+
+<!-- Add in order, one per line: - Name (optional link) -->
+
+*Your name could be here.*
+
 ## Acknowledgements
 
 - Inspired by **港硕上课鼓励器** ("HK master's class motivator", HKU edition) on Xiaohongshu. This project is written from scratch and uses none of its code.
