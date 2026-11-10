@@ -3,10 +3,42 @@ import { getLangPref, setLangPref, subscribeLang, t } from '../app/i18n';
 import { getThemePref, setThemePref, subscribeTheme } from '../app/theme';
 import { RateNote } from './Fx';
 import { track } from '../app/analytics';
-import { COFFEE_URL } from '../app/site';
+import { AFDIAN_URL, COFFEE_URL } from '../app/site';
 import { CoffeeIcon, FullscreenIcon, GlobeIcon, MiniIcon, MoonIcon } from './icons';
 import { IconButton, PopMenu } from './PopMenu';
 import { Quip } from './views';
+
+/** Coffee icon: a menu of tip jars, or a plain link when only one is set. */
+function TipJar() {
+  const jars = [
+    { url: COFFEE_URL, label: t('tipBmc'), event: 'tip-bmc' as const },
+    { url: AFDIAN_URL, label: t('tipAfdian'), event: 'tip-afdian' as const },
+  ].filter((j) => j.url);
+  const [jar, ...more] = jars;
+  if (!jar) return null;
+  if (more.length === 0) {
+    return (
+      <a
+        href={jar.url}
+        target="_blank"
+        rel="noopener"
+        title={`${t('coffee')} · ${jar.label}`}
+        aria-label={t('coffee')}
+        onClick={() => track(jar.event)}
+        className="grid size-8 place-items-center rounded-md text-muted transition-colors duration-200 hover:bg-raised hover:text-fg"
+      >
+        <CoffeeIcon />
+      </a>
+    );
+  }
+  return (
+    <PopMenu
+      label={t('coffee')}
+      icon={<CoffeeIcon />}
+      items={jars.map((j) => ({ label: j.label, href: j.url, onSelect: () => track(j.event) }))}
+    />
+  );
+}
 
 /**
  * Bottom bar: device preferences on the left (language, theme) plus the coffee link, the quip and rate note in
@@ -48,19 +80,7 @@ export function Footer({ onMini }: { onMini: () => void }) {
               { label: t('themeDark'), selected: themePref === 'dark', onSelect: () => setThemePref('dark') },
             ]}
           />
-          {COFFEE_URL && (
-            <a
-              href={COFFEE_URL}
-              target="_blank"
-              rel="noopener"
-              title={t('coffee')}
-              aria-label={t('coffee')}
-              onClick={() => track('coffee')}
-              className="grid size-8 place-items-center rounded-md text-muted transition-colors duration-200 hover:bg-raised hover:text-fg"
-            >
-              <CoffeeIcon />
-            </a>
-          )}
+          <TipJar />
         </div>
         <div className="min-w-0 [grid-area:text]">
           <Quip />

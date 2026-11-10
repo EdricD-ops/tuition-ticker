@@ -5,6 +5,8 @@ export interface MenuItem {
   onSelect: () => void;
   /** Shows a check mark: the current choice in a radio-style menu. */
   selected?: boolean;
+  /** Makes the item a link that opens in a new tab; `onSelect` still runs on click. */
+  href?: string;
 }
 
 /**
@@ -57,26 +59,37 @@ export function PopMenu({
           aria-label={label}
           className={`absolute z-30 min-w-40 overflow-hidden rounded-lg border border-line bg-surface py-1 shadow-xl [animation:fade_150ms_ease_both] ${position}`}
         >
-          {items.map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              role="menuitemradio"
-              aria-checked={!!item.selected}
-              onClick={() => {
-                setOpen(false);
-                item.onSelect();
-              }}
-              className={`flex w-full items-center justify-between gap-4 px-3.5 py-2 text-left text-[13px] transition-colors hover:bg-raised hover:text-fg ${
-                item.selected ? 'text-fg' : 'text-fg-2'
-              }`}
-            >
-              {item.label}
-              <span aria-hidden className={item.selected ? 'text-live' : 'invisible'}>
-                ✓
-              </span>
-            </button>
-          ))}
+          {items.map((item) => {
+            const pick = () => {
+              setOpen(false);
+              item.onSelect();
+            };
+            const look = `flex w-full items-center justify-between gap-4 whitespace-nowrap px-3.5 py-2 text-left text-[13px] transition-colors hover:bg-raised hover:text-fg ${
+              item.selected ? 'text-fg' : 'text-fg-2'
+            }`;
+            return item.href ? (
+              <a key={item.label} role="menuitem" href={item.href} target="_blank" rel="noopener" onClick={pick} className={look}>
+                {item.label}
+                <span aria-hidden className="text-muted">
+                  ↗
+                </span>
+              </a>
+            ) : (
+              <button
+                key={item.label}
+                type="button"
+                role="menuitemradio"
+                aria-checked={!!item.selected}
+                onClick={pick}
+                className={look}
+              >
+                {item.label}
+                <span aria-hidden className={item.selected ? 'text-live' : 'invisible'}>
+                  ✓
+                </span>
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

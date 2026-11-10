@@ -179,6 +179,8 @@ const en = {
   dataPrivacy:
     'Your config stays in this browser and is never uploaded. The site counts anonymous visits with GoatCounter (no cookies, no config data).',
   coffee: 'Buy me a coffee',
+  tipBmc: 'Buy Me a Coffee · card',
+  tipAfdian: 'Afdian · WeChat Pay / Alipay',
   resetData: 'Clear data and return to demo',
   resetBody:
     'This deletes the config saved in this browser (school, tuition, courses, holidays) and the class you picked. It can’t be undone, so export JSON first if you want to keep it. Language, theme and privacy settings stay.',
@@ -370,6 +372,8 @@ const zh: Messages = {
   importFailed: '这个文件不是 Tuition Ticker 的配置。',
   dataPrivacy: '配置只保存在这个浏览器里，不会上传。网站用 GoatCounter 统计匿名访问量（不用 cookie，不含配置内容）。',
   coffee: '请我喝杯咖啡',
+  tipBmc: 'Buy Me a Coffee · 银行卡',
+  tipAfdian: '爱发电 · 微信 / 支付宝',
   resetData: '清除数据，回到演示',
   resetBody:
     '会删除这个浏览器里保存的配置（学校、学费、课程、假日）和当前选中的课，无法撤销；想保留的话先导出 JSON。语言、主题和打码设置不受影响。',

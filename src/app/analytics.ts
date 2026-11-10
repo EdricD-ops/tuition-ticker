@@ -16,7 +16,8 @@ export type TrackedEvent =
   | 'share-link-open'
   | 'view-mini'
   | 'pip-open'
-  | 'coffee';
+  | 'tip-bmc'
+  | 'tip-afdian';
 
 declare global {
   interface Window {

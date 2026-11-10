@@ -204,7 +204,7 @@
 | 开源与部署 | MIT（署名 Edric D.）；GitHub Pages，推送 `main` 后由 `.github/workflows/deploy.yml` 测试、构建、部署；`vite.config.ts` 用相对路径 `base: './'`，任何子路径都能跑（fork 不用改） |
 | README | `README.md` 中文为主，`README.en.md` 英文；GIF 和截图在 `docs/`（用无头 Chrome 录演示模式）；只致谢「港硕上课鼓励器」 |
 | 访问统计 | GoatCounter（`tuitionticker.goatcounter.com`），`index.html` 里固定版本脚本 + SRI；不用 cookie，只报路径和查询参数（不含 `#`，分享链接里的配置不会发出）；事件名固定（`src/app/analytics.ts`），绝不带配置内容；设置「数据」区有一句隐私说明。以后若要研究用户特征：设置里加默认关闭的「贡献匿名统计」开关，或单独问卷，不做非匿名统计 |
-| 打赏 | 页脚左下角咖啡图标 →「请我喝杯咖啡」（Buy Me a Coffee），地址常量 `COFFEE_URL`（`src/app/site.ts`），为空时不显示 |
+| 打赏 | 页脚左下角咖啡图标「请我喝杯咖啡」：Buy Me a Coffee（银行卡）和爱发电（微信 / 支付宝），地址常量 `COFFEE_URL`、`AFDIAN_URL`（`src/app/site.ts`）；两个都有时点图标弹出菜单，只有一个时直接链接，都为空时不显示；新标签页打开，统计事件 `tip-bmc` / `tip-afdian` |
 | 作者隐私 | 名字（Edric D.）可以公开；不能透露作者就读的学校：示例、测试、截图一律用虚构学校（Harbour University）和虚构课程代码 |
 | OG 元信息 | `index.html` 写死 GitHub Pages 绝对地址；预览图 `public/og.png`（1200×630，不进离线缓存） |
 
@@ -235,6 +235,7 @@
 - 2026-11-10：设置里新增「清除数据，回到演示」：确认后删除本机配置和当前选中的课，回到演示看板；本机偏好保留。
 - 2026-11-10：README 致谢只写「港硕上课鼓励器」（HKU 版）。是否开源待定：第 8 阶段暂停，等和用户讨论。
 - 2026-11-10：确定开源路线：MIT + GitHub Pages + 小红书 / 抖音运营。第 8 阶段完成：README（中 / 英，含演示 GIF 和截图）、LICENSE、CONTRIBUTING、PR 模板、Pages 部署 workflow；新增 GoatCounter 匿名统计和几个功能事件、「请我喝杯咖啡」链接、设置里的隐私说明；示例和测试里的学校、课程代码换成虚构的；git 历史压成一个初始提交。
+- 2026-11-10：上线 GitHub Pages（https://edricd-ops.github.io/tuition-ticker/）。打赏入口加上爱发电：咖啡图标在两个链接都有时变成菜单（Buy Me a Coffee · 银行卡 / 爱发电 · 微信 / 支付宝）。
 
 ## 12. 和我协作的方式
 
