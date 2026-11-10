@@ -84,7 +84,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for formats and workflow.
 
 ## Support the project
 
-If it made you pay a little more attention in class, you can buy me a coffee on [Afdian](https://afdian.com/a/edric0108) (WeChat Pay / Alipay). It keeps the project free and ad-free. The coffee icon at the bottom left of the site opens it too.
+If it made you pay a little more attention in class, you can buy me a coffee. It keeps the project free and ad-free:
+
+- [Buy Me a Coffee](https://buymeacoffee.com/edric): card
+- [Afdian](https://afdian.com/a/edric0108): WeChat Pay / Alipay
+
+The coffee icon at the bottom left of the site opens it too.
 
 ### Sponsors
 

@@ -9,5 +9,5 @@ export const REPO_URL = 'https://github.com/EdricD-ops/tuition-ticker';
  * Tip jars, behind the footer's coffee icon. Buy Me a Coffee takes cards; Afdian takes
  * WeChat Pay and Alipay. Empty entries are hidden; with both empty the icon is hidden too.
  */
-export const COFFEE_URL = '';
+export const COFFEE_URL = 'https://buymeacoffee.com/edric';
 export const AFDIAN_URL = 'https://afdian.com/a/edric0108';
