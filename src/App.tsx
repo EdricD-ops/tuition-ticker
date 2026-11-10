@@ -360,7 +360,9 @@ function Header({
   const SMALL = 'h-7! px-2.5! text-xs!';
 
   return (
-    <header className="sticky top-0 z-10 border-b border-line bg-bg/85 backdrop-blur">
+    // Phones put the bar at the very end of the page, after the footer, so the page opens
+    // on the live number; from 640px up it is the sticky top bar.
+    <header className="order-last border-t border-line bg-bg/85 backdrop-blur sm:sticky sm:top-0 sm:z-10 sm:order-none sm:border-t-0 sm:border-b">
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between gap-4 px-5 sm:h-[76px] sm:px-10">
         <div className="flex min-w-0 items-center gap-4">
           <span className="flex shrink-0 items-center gap-2.5">
