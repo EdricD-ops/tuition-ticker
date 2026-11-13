@@ -1,4 +1,6 @@
 /** Minimal i18n: follows the browser unless the user picks a language (stored per device). */
+import { toHant } from './hant';
+import type { LocalizedText } from '../core/types';
 
 const en = {
   onClass: 'ON CLASS',
@@ -454,47 +456,306 @@ const zh: Messages = {
   cardPerClass: '每节课',
 };
 
+const zhHant: Messages = {
+  onClass: 'ON CLASS',
+  offClass: 'OFF CLASS',
+  holiday: 'HOLIDAY',
+  demo: '示範資料',
+  useMySchool: '換成我的學校',
+  fullscreen: '全螢幕',
+  amountHidden: '金額已隱藏',
+  privacy0: '隱私：顯示全部金額。點一下遮住學費總額',
+  privacy1: '隱私：已遮住學費總額。點一下遮住所有金額',
+  privacy2: '隱私：已遮住所有金額。點一下全部顯示',
+  share: '分享',
+  language: '語言',
+  langAuto: '跟隨瀏覽器',
+  theme: '主題',
+  themeSystem: '跟隨系統',
+  themeLight: '淺色',
+  themeDark: '深色',
+  more: '更多',
+  shareTitle: '分享',
+  shareCardTitle: '分享卡片',
+  ratioPost: '3:4 · 小紅書',
+  ratioStory: '9:16 · Story',
+  hideAmounts: '卡片上隱藏具體金額',
+  hideAmountsHint: '只保留每秒成本和百分比。',
+  downloadPng: '下載 PNG',
+  exporting: '正在產生…',
+  exportFailed: '圖片產生失敗，請重試。',
+  shareLinkTitle: '分享連結',
+  shareLinkHint: '連結本身就包含你的整份設定（學校、學費、課程、假日），不會上傳到任何伺服器；拿到連結的人都能看到這些資訊。',
+  copyLink: '複製連結',
+  copied: '已複製',
+  shareLinkDemo: '先換成你自己的學校，才能分享連結。',
+  sharedLoaded: '已從分享連結載入，確認無誤後儲存即可使用。',
+  sharedInvalid: '這個分享連結已損壞或不完整。',
+  dismiss: '關閉',
+  cardPerSecond: '每秒成本',
+  cardTuitionUsed: '已用學費',
+  cardClassProgress: '本節進度',
+  cardClassesLeft: '剩餘課節',
+  miniView: '迷你',
+  miniViewHint: '迷你模式：只看本節消耗、每秒成本和進度',
+  fullView: '完整看板',
+  pipOpen: '置頂小窗',
+  pipOpenHint: '彈出一個始終在其他視窗上方的小窗',
+  pipClose: '關閉小窗',
+  exitFullscreen: '退出全螢幕',
+  spentThisClass: '本節已消耗',
+  leftThisClass: '本節剩餘',
+  perSecond: '每秒成本',
+  elapsed: '已上',
+  remaining: '剩餘',
+  overview: '學費總覽',
+  overviewTag: '截至目前',
+  perClassTag: '每節價格',
+  spentSoFar: '開學至今已消耗',
+  tuitionLeft: '剩餘學費',
+  avgPerClass: '平均每節課',
+  classesLeft: '剩餘課節數',
+  classesCount: '{n} 節',
+  tuitionUsed: '已用學費 {p}',
+  pickTitle: '現在在上哪門課？',
+  pickHint: '從這門課的開始時間算起。',
+  happeningNow: '正在上',
+  perClass: '/ 節',
+  cancelClass: '取消本節',
+  startsIn: '距離上課還有',
+  classWorth: '這節課價值',
+  finishedTitle: '本節已結束',
+  finishedBody: '這節課花了',
+  pickAnother: '選擇其他課程',
+  holidayToday: '今天是{name}',
+  holidayPublic: '公眾假期',
+  holidaySchool: '學校假日',
+  holidayConfirmTitle: '今天是假日',
+  holidayConfirmBody: '今天是{name}，確定要上課嗎？',
+  confirmStart: '確定上課',
+  cancel: '取消',
+  unconfiguredTitle: '還差一點設定',
+  unconfiguredBody: '請在設定裡填寫開學日期，並為每門課選好上課日、開始和結束時間、週數。',
+  zeroTuition: '學費為 0，所有金額都會顯示為 0。',
+  allDone: '課程已全部上完，學費花得明明白白。',
+  settings: '設定',
+  termStart: '開學日期',
+  termStartHint: '第 1 週的第一天，週數從這天開始算。',
+  classDays: '上課日',
+  wd1: '一', wd2: '二', wd3: '三', wd4: '四', wd5: '五', wd6: '六', wd7: '日',
+  errCourseDays: '至少選一天。',
+  errTermStart: '請選擇開學日期。',
+  openSettings: '打開設定',
+  importTimetable: '匯入課程表',
+  importTitle: '匯入課程表',
+  importIntro: '從檔案或文字讀取課程，內容不會離開這個瀏覽器。',
+  importTabIcs: '日曆檔案 .ics',
+  importTabCsv: '表格 CSV',
+  importTabText: '貼上文字',
+  importIcsHint: '從學校系統、Outlook、Google 或 Apple 日曆匯出 .ics 檔案後選擇它。',
+  importCsvHint: '用 Excel / Numbers / Google 表格填好範本，另存為 CSV 後選擇它。也可以直接把表格儲存格複製到「貼上文字」。',
+  importTextHint: '每行一門課，例如「FINA6001 Corporate Finance 週二 18:00-22:00」。單獨一行的「週一」「Monday」會用於它下面的幾行。',
+  downloadTemplate: '下載範本',
+  chooseFile: '選擇檔案',
+  readText: '讀取文字',
+  importFound: '讀取到 {n} 門課',
+  weeksCount: '{n} 週',
+  importNone: '沒有讀取到課程。請確認每門課都有星期幾和類似 18:00-22:00 的時間。',
+  importTermStart: '同時把開學日期設為 {date}（第一節課所在週的週一）',
+  replaceCourses: '替換現有課程',
+  appendCourses: '追加到現有課程',
+  setupTitle: '設定你的學費計時器',
+  setupIntro: '大約一分鐘。所有內容只儲存在這個瀏覽器裡。',
+  stepOf: '第 {n} / {total} 步',
+  stepSchool: '學校與學費',
+  stepCourses: '課程',
+  stepExtras: '假日與換算',
+  back: '上一步',
+  next: '下一步',
+  finish: '開始計時',
+  save: '儲存',
+  close: '關閉',
+  schoolName: '學校',
+  schoolNamePlaceholder: '搜尋或輸入，例如 港大 / HKU',
+  schoolNameHint: 'QS 前 500 名（不含內地高校）可直接搜尋；不在列表裡的直接輸入即可。',
+  schoolUseTyped: '使用「{name}」（不在列表中）',
+  schoolLoading: '正在載入學校列表…',
+  programme: '就讀課程（可選）',
+  programmePlaceholder: '例如 MSc Computer Science',
+  region: '地區',
+  currency: '學費貨幣',
+  timeZone: '學校時區',
+  timeZoneHint: '課程時間按這個時區計算，不受你電腦所在時區影響。',
+  tuition: '總學費',
+  tuitionHint: '整個課程的學費，以學費貨幣計。',
+  coursesTitle: '課程',
+  coursesHint: '每門課從開學日期起，按上課日上滿所填週數（假日除外）。每秒成本 = 總學費 ÷ 總課時。',
+  courseName: '課程名',
+  courseNamePlaceholder: '例如 Corporate Finance',
+  startTime: '開始',
+  endTime: '結束',
+  weeks: '週數',
+  addCourse: '新增課程',
+  removeCourse: '刪除',
+  totalHours: '共 {hours} 小時 · {classes} 節課',
+  ratePreview: '約每秒 {rate}',
+  holidaysTitle: '假日',
+  holidaysHint: '假日當天的課視為不上：不計入已消耗，學費分攤到其他課節上。如果學校那天照常上課，把這個公眾假期的提醒關掉即可。',
+  skippedHolidays: '（已扣除 {n} 節假日的課）',
+  publicHolidays: '公眾假期 · {region}',
+  noPublicHolidays: '這個地區暫時沒有內建的公眾假期。',
+  showPast: '顯示已過去的',
+  hidePast: '隱藏已過去的',
+  remind: '提醒',
+  schoolHolidays: '學校假日',
+  holidayStart: '開始日期',
+  holidayEnd: '結束日期（可選）',
+  holidayName: '備註',
+  holidayNamePlaceholder: '例如 閱讀週',
+  addHoliday: '新增假日',
+  fxTitle: '匯率換算',
+  displayCurrency: '換算成',
+  displayCurrencyOff: '不換算',
+  displayCurrencyHint: '使用每日參考匯率（open.er-api.com），不是即時交易牌價。',
+  fixedRate: '固定匯率（可選）',
+  fixedRateHint: '留空則使用每日參考匯率。',
+  fixedRateCurrent: '當前參考匯率：1 {from} ≈ {rate} {to}（{date}）。',
+  rateLine: '1 {from} ≈ {rate} {to}',
+  rateReference: '參考匯率，更新於 {date} · 非即時牌價',
+  rateCached: '離線 · 使用 {date} 的快取匯率',
+  rateFixed: '手動固定匯率',
+  rateLoading: '正在取得匯率…',
+  rateUnavailable: '暫時取得不到 {from} → {to} 的匯率',
+  dataTitle: '資料',
+  exportJson: '匯出 JSON',
+  importJson: '匯入 JSON',
+  importDone: '已匯入，確認無誤後儲存。',
+  importFailed: '這個檔案不是 Tuition Ticker 的設定檔。',
+  dataPrivacy: '設定只儲存在這個瀏覽器裡，不會上傳。網站用 GoatCounter 統計匿名訪問量（不用 cookie，不含設定內容）。',
+  coffee: '請我喝杯咖啡',
+  tipBmc: 'Buy Me a Coffee · 銀行卡',
+  tipAfdian: '愛發電 · 微信 / 支付寶',
+  resetData: '清除資料，回到示範',
+  resetBody:
+    '會刪除這個瀏覽器裡儲存的設定（學校、學費、課程、假日）和當前選中的課，無法撤銷；想保留的話先匯出 JSON。語言、主題和打碼設定不受影響。',
+  resetConfirm: '確認清除',
+  errSchoolName: '請填寫名稱。',
+  errTuition: '學費需要大於 0。',
+  errCourses: '至少新增一門填寫完整的課程。',
+  errCourseTime: '結束時間要晚於開始時間（不支援跨午夜）。',
+  errCourseCount: '請填寫大於 0 的整數。',
+  errHolidayRange: '結束日期要晚於開始日期。',
+  quickTitle: '算算一節課多少錢',
+  quickIntro: '填三個數就能開始跳。所有內容只儲存在這個瀏覽器裡。',
+  quickClasses: '一共上幾節課',
+  quickHelper: '不確定？用每週幾節 × 幾週算：',
+  quickPerWeek: '節 / 週',
+  quickWeeksUnit: '週',
+  quickLength: '每節課多長',
+  quickCustomMinutes: '其他',
+  quickPreview: '≈ 一節課 {perClass} · 每秒 {perSecond}',
+  quickMore: '想看開學至今燒了多少、還剩幾節課？改用課表設定',
+  backToQuick: '回到快速設定',
+  optional: '（選填）',
+  lenHours: '{n} 小時',
+  lenMinutes: '{n} 分鐘',
+  errQuickMinutes: '請填 1 分鐘到 24 小時之間的時長。',
+  modeTitle: '計費方式',
+  modeQuick: '快速',
+  modeFull: '按課表',
+  modeQuickHint: '總節數 × 每節時長，不用填開學日期和課表。',
+  modeFullHint: '填每門課的上課日和時間，可以算開學至今已消耗、剩餘課節數，並扣除假日。',
+  oneClassCosts: '一節課',
+  quickClassesValue: '{n} 節 × {len}',
+  quickClassesLabel: '總課節',
+  thisClass: '本節課',
+  quickStartTitle: '現在在上課嗎？',
+  quickStartNow: '開始計費（從現在算起）',
+  quickStartLate: '從 {n} 分鐘前算起',
+  quickElapsedLabel: '已經上了',
+  quickElapsedUnit: '分鐘',
+  quickStartHint: '計滿{len}後自動停止。',
+  upgradeTitle: '開學至今燒了多少？',
+  upgradeBody: '補上開學日期和課表，就能看到開學至今已消耗和剩餘課節數。',
+  upgradeCta: '補全課表',
+  upgradeBanner: '填好開學日期和每門課後儲存。之後也可以在「計費方式」切回快速。',
+  cardPerClass: '每節課',
+};
+
 export type MessageKey = keyof Messages;
 
+/** Content language: Chinese (either script) or English. Data such as holidays has these two. */
 export type Lang = 'zh' | 'en';
 /** The user's choice; `auto` follows the browser. Stored per device, never in the config. */
-export type LangPref = 'auto' | Lang;
+export type LangPref = 'auto' | 'zh' | 'zh-Hant' | 'en';
 
 const LANG_KEY = 'tuition-ticker:lang';
 const browserLang = typeof navigator !== 'undefined' ? navigator.language : 'en';
 const browserIsZh = browserLang.toLowerCase().startsWith('zh');
+/** zh-TW, zh-HK, zh-MO and zh-Hant-* read Traditional characters. */
+const browserIsHant = /^zh-(hant|tw|hk|mo)\b/i.test(browserLang);
 
 function readPref(): LangPref {
   try {
     const v = localStorage.getItem(LANG_KEY);
-    return v === 'zh' || v === 'en' ? v : 'auto';
+    return v === 'zh' || v === 'zh-Hant' || v === 'en' ? v : 'auto';
   } catch {
     return 'auto';
   }
 }
 
-function resolve(pref: LangPref): { lang: Lang; locale: string } {
-  const lang: Lang = pref === 'auto' ? (browserIsZh ? 'zh' : 'en') : pref;
+function resolve(pref: LangPref): { lang: Lang; hant: boolean; locale: string } {
+  const lang: Lang = pref === 'auto' ? (browserIsZh ? 'zh' : 'en') : pref === 'en' ? 'en' : 'zh';
+  const hant = lang === 'zh' && (pref === 'auto' ? browserIsHant : pref === 'zh-Hant');
   // Keep the browser's regional variant (zh-HK, en-GB …) when it matches the language.
-  const locale = (lang === 'zh') === browserIsZh ? browserLang : lang === 'zh' ? 'zh-CN' : 'en-US';
-  return { lang, locale };
+  const locale =
+    lang === 'en'
+      ? browserIsZh ? 'en-US' : browserLang
+      : hant
+        ? browserIsHant ? browserLang : 'zh-HK'
+        : browserIsZh && !browserIsHant ? browserLang : 'zh-CN';
+  return { lang, hant, locale };
 }
 
 let pref: LangPref = readPref();
-/** Current UI language. A live binding: re-read it on each render. */
+/** Current content language. A live binding: re-read it on each render. */
 export let lang: Lang = resolve(pref).lang;
+/** True when Chinese is shown in Traditional characters. */
+export let hant: boolean = resolve(pref).hant;
+/** What the UI shows: 'en', 'zh' or 'zh-Hant'. The app remounts when it changes. */
+export let uiLang: 'en' | 'zh' | 'zh-Hant' = 'en';
 /** Locale for number formatting, matching `lang`. */
 export let locale: string = resolve(pref).locale;
-let messages = lang === 'zh' ? zh : en;
+let messages = en;
 
 const listeners = new Set<() => void>();
 
 function apply(): void {
-  ({ lang, locale } = resolve(pref));
-  messages = lang === 'zh' ? zh : en;
-  if (typeof document !== 'undefined') document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  ({ lang, hant, locale } = resolve(pref));
+  uiLang = lang === 'en' ? 'en' : hant ? 'zh-Hant' : 'zh';
+  messages = lang === 'en' ? en : hant ? zhHant : zh;
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lang === 'en' ? 'en' : hant ? 'zh-Hant' : 'zh-CN';
+  }
 }
 apply();
+
+/** Bundled Chinese data is Simplified; shows it in Traditional when that is the UI script. */
+export const zhText = (text: string): string => (hant ? toHant(text) : text);
+
+/**
+ * Bundled text ({ en, zh }) in the UI language and script. A plain string is the user's own
+ * text and is shown as typed.
+ */
+export function loc(text: LocalizedText): string {
+  if (typeof text === 'string') return text;
+  return lang === 'en' ? text.en : zhText(text.zh);
+}
+
+/** The rotating one-liners in the UI language. */
+export function quipList(all: { zh: string[]; en: string[] }): string[] {
+  return lang === 'en' ? all.en : all.zh.map(zhText);
+}
 
 export const getLangPref = (): LangPref => pref;
 

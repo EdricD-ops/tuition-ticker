@@ -25,7 +25,7 @@ No sign-up and no install: **first-time visitors see a live demo straight away**
 - **Made for sharing**: export a 3:4 or 9:16 share card in one click, with an option to hide amounts; three privacy levels mask figures for photos in class
 - **Share links**: the whole config fits in a link, so classmates can load the same timetable and save it
 - **Works offline**: installable as a PWA and opens without a connection
-- Chinese / English, light / dark, following your system or set by hand
+- Simplified Chinese / Traditional Chinese / English, light / dark, following your system or set by hand
 
 ## Screenshots
 

@@ -2,12 +2,12 @@ import { StrictMode, useSyncExternalStore } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { lang, subscribeLang } from './app/i18n';
+import { subscribeLang, uiLang } from './app/i18n';
 import './app/theme';
 
 /** Remounts the app when the language changes, so every memoised string is rebuilt. */
 function Root() {
-  const current = useSyncExternalStore(subscribeLang, () => lang);
+  const current = useSyncExternalStore(subscribeLang, () => uiLang);
   return <App key={current} />;
 }
 

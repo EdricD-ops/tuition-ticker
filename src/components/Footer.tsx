@@ -67,7 +67,8 @@ export function Footer({ onMini }: { onMini: () => void }) {
             icon={<GlobeIcon />}
             items={[
               { label: t('langAuto'), selected: langPref === 'auto', onSelect: () => setLangPref('auto') },
-              { label: '中文', selected: langPref === 'zh', onSelect: () => setLangPref('zh') },
+              { label: '简体中文', selected: langPref === 'zh', onSelect: () => setLangPref('zh') },
+              { label: '繁體中文', selected: langPref === 'zh-Hant', onSelect: () => setLangPref('zh-Hant') },
               { label: 'English', selected: langPref === 'en', onSelect: () => setLangPref('en') },
             ]}
           />

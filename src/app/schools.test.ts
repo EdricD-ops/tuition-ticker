@@ -61,3 +61,11 @@ describe('searchSchools', () => {
     expect(searchSchools(index, 'university', 5)).toHaveLength(5);
   });
 });
+
+describe('Traditional Chinese search', () => {
+  it('finds schools typed in either script', () => {
+    expect(top('劍橋')).toBeDefined();
+    expect(top('劍橋')).toBe(top('剑桥'));
+    expect(top('香港大学')).toBe(top('香港大學'));
+  });
+});

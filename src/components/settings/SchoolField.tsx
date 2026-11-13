@@ -1,7 +1,7 @@
 import { useEffect, useId, useMemo, useState } from 'react';
 import type { TickerConfig } from '../../core';
 import { withCurrency } from '../../app/configIO';
-import { lang, t } from '../../app/i18n';
+import { lang, loc, t, zhText } from '../../app/i18n';
 import { findRegion } from '../../app/regions';
 import { indexSchools, schoolDisplayName, searchSchools, type School, type SchoolList } from '../../app/schools';
 import { TextInput } from './fields';
@@ -81,9 +81,9 @@ export function SchoolField({
 
   const hint = (s: School) => {
     const region = findRegion(s.country);
-    const place = region ? (lang === 'zh' ? region.name.zh : region.name.en) : s.country;
+    const place = region ? loc(region.name) : s.country;
     // Chinese readers get the Chinese name when the school has no Chinese-script name.
-    const zh = lang === 'zh' && !s.local ? `${s.zh} · ` : '';
+    const zh = lang === 'zh' && !s.local ? `${zhText(s.zh)} · ` : '';
     return `${zh}${place}`;
   };
 

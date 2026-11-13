@@ -24,11 +24,13 @@ describe('weekday parsing', () => {
 
 describe('parseTable', () => {
   it('reads the template back', () => {
-    expect(strip(parseTable(csvTemplate(true)))).toEqual([
+    const expected = [
       { name: 'Corporate Finance', weekdays: [2, 4], start: '18:00', end: '21:00', weeks: 13 },
       { name: 'Statistics', weekdays: [6], start: '09:30', end: '12:30', weeks: 13 },
-    ]);
-    expect(strip(parseTable(csvTemplate(false)))).toHaveLength(2);
+    ];
+    expect(strip(parseTable(csvTemplate('zh')))).toEqual(expected);
+    expect(strip(parseTable(csvTemplate('zh-Hant')))).toEqual(expected);
+    expect(strip(parseTable(csvTemplate('en')))).toEqual(expected);
   });
 
   it('accepts tab-separated rows without a header, a single time-range cell, and quotes', () => {

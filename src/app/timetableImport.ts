@@ -139,10 +139,10 @@ function splitRow(line: string, sep: string): string[] {
 }
 
 const HEADERS: Record<keyof Draft, RegExp> = {
-  name: /^(course|course name|name|subject|课程|课程名|課程|科目|名称)$/i,
-  weekdays: /^(weekdays?|days?|星期|星期几|周几|上课日)$/i,
-  start: /^(start|start time|from|开始|开始时间|開始)$/i,
-  end: /^(end|end time|to|结束|结束时间|結束)$/i,
+  name: /^(course|course name|name|subject|课程|课程名|課程|課程名|科目|名称|名稱)$/i,
+  weekdays: /^(weekdays?|days?|星期|星期几|星期幾|周几|週幾|上课日|上課日)$/i,
+  start: /^(start|start time|from|开始|开始时间|開始|開始時間)$/i,
+  end: /^(end|end time|to|结束|结束时间|結束|結束時間)$/i,
   weeks: /^(weeks|周数|週數)$/i,
 };
 
@@ -354,18 +354,24 @@ export function parseIcs(text: string, schoolTz: string): ImportResult {
 // ---- Template ----------------------------------------------------------------------------
 
 /** A CSV the user can fill in Excel / Numbers / Google Sheets and import back. */
-export function csvTemplate(zh: boolean): string {
-  const rows = zh
-    ? [
-        ['课程名', '星期', '开始', '结束', '周数'],
-        ['Corporate Finance', '周二;周四', '18:00', '21:00', '13'],
-        ['Statistics', '周六', '09:30', '12:30', '13'],
-      ]
-    : [
-        ['course', 'weekdays', 'start', 'end', 'weeks'],
-        ['Corporate Finance', 'Tue;Thu', '18:00', '21:00', '13'],
-        ['Statistics', 'Sat', '09:30', '12:30', '13'],
-      ];
+export function csvTemplate(language: 'zh' | 'zh-Hant' | 'en' = 'en'): string {
+  const rows = {
+    zh: [
+      ['课程名', '星期', '开始', '结束', '周数'],
+      ['Corporate Finance', '周二;周四', '18:00', '21:00', '13'],
+      ['Statistics', '周六', '09:30', '12:30', '13'],
+    ],
+    'zh-Hant': [
+      ['課程名', '星期', '開始', '結束', '週數'],
+      ['Corporate Finance', '週二;週四', '18:00', '21:00', '13'],
+      ['Statistics', '週六', '09:30', '12:30', '13'],
+    ],
+    en: [
+      ['course', 'weekdays', 'start', 'end', 'weeks'],
+      ['Corporate Finance', 'Tue;Thu', '18:00', '21:00', '13'],
+      ['Statistics', 'Sat', '09:30', '12:30', '13'],
+    ],
+  }[language];
   // BOM so Excel opens UTF-8 (Chinese) correctly.
   return `﻿${rows.map((r) => r.join(',')).join('\r\n')}\r\n`;
 }

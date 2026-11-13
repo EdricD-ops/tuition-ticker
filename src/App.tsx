@@ -7,7 +7,6 @@ import {
   dateInTimeZone,
   getSnapshot,
   holidayOn,
-  localize,
   startClass,
   startQuickClass,
   type ClassWindow,
@@ -18,7 +17,7 @@ import { track } from './app/analytics';
 import { clearShareHash, decodeConfig, sharePayload } from './app/shareLink';
 import quips from './data/quips.json';
 import { publicHolidaysFor } from './app/holidayData';
-import { lang, t } from './app/i18n';
+import { loc, quipList, t } from './app/i18n';
 import { clearSavedData, loadActive, loadConfig, saveActive, saveConfig } from './app/storage';
 import { useNow } from './app/useNow';
 import { usePip } from './app/usePip';
@@ -82,7 +81,7 @@ export default function App() {
   const [privacy, cyclePrivacy] = usePrivacyState();
   const [shareQuip, setShareQuip] = useState('');
   const openShare = () => {
-    const list: string[] = quips[lang];
+    const list = quipList(quips);
     setShareQuip(list[Math.floor(Math.random() * list.length)] ?? '');
     setOverlay('share');
     track('share-open');
@@ -191,7 +190,7 @@ export default function App() {
 
   const cancel = () => setActive(null);
 
-  const holidayName = holiday ? localize(holiday.holiday.name, lang) : '';
+  const holidayName = holiday ? loc(holiday.holiday.name) : '';
   const onClass = snap.status === 'in-class';
   const statusLabel = onClass ? t('onClass') : holiday ? t('holiday') : t('offClass');
   const currency = config.currency;

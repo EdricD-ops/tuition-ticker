@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import {
   courseCost,
   formatDuration,
@@ -10,7 +10,7 @@ import {
 import { daysLabel } from './settings/ImportDialog';
 import { NumberInput } from './settings/fields';
 import { classLength } from '../app/classLength';
-import { lang, t } from '../app/i18n';
+import { quipList, t } from '../app/i18n';
 import quips from '../data/quips.json';
 import { Approx } from './Fx';
 import { Money } from './Money';
@@ -510,7 +510,7 @@ export function Totals({ snap, currency }: { snap: Snapshot; currency: string })
 }
 
 export function Quip() {
-  const list: string[] = quips[lang];
+  const list = useMemo(() => quipList(quips), []);
   const [i, setI] = useState(() => Math.floor(Math.random() * list.length));
   useEffect(() => {
     const id = setInterval(() => setI((v) => (v + 1) % list.length), 8000);

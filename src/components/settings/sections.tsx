@@ -4,7 +4,6 @@ import {
   resolveConversion,
   dateInTimeZone,
   formatMoney,
-  localize,
   type Course,
   type Holiday,
   type QuickSetup,
@@ -16,7 +15,7 @@ import { classLength } from '../../app/classLength';
 import { DEFAULT_CLASS_MINUTES, newId, withCurrency } from '../../app/configIO';
 import type { FormErrors } from '../../app/formErrors';
 import { publicHolidaysFor } from '../../app/holidayData';
-import { lang, locale, t } from '../../app/i18n';
+import { loc, locale, t } from '../../app/i18n';
 import { CURRENCIES, REGIONS, allTimeZones, findRegion } from '../../app/regions';
 import { useRates } from '../../app/useRates';
 import { formatRate } from '../Fx';
@@ -70,7 +69,7 @@ export function SchoolSection({ draft, onChange, errors, showErrors }: SectionPr
         <Select value={draft.region} onChange={(e) => setRegion(e.target.value)}>
           {REGIONS.map((r) => (
             <option key={r.code} value={r.code}>
-              {lang === 'zh' ? r.name.zh : r.name.en}
+              {loc(r.name)}
             </option>
           ))}
         </Select>
@@ -493,7 +492,7 @@ export function HolidaysSection({ draft, onChange }: Pick<SectionProps, 'draft' 
       <div>
         <div className="flex items-baseline justify-between gap-3">
           <span className="text-[13px] font-medium text-fg-2">
-            {t('publicHolidays', { region: region ? localize(region.name, lang) : draft.region })}
+            {t('publicHolidays', { region: region ? loc(region.name) : draft.region })}
           </span>
           {all.length > 0 && (
             <LinkButton onClick={() => setShowPast((v) => !v)}>
@@ -509,7 +508,7 @@ export function HolidaysSection({ draft, onChange }: Pick<SectionProps, 'draft' 
               <li key={h.date} className="flex items-center gap-3 px-4 py-2.5 text-sm">
                 <span className="num w-24 shrink-0 font-mono text-xs text-muted">{h.date}</span>
                 <span className={`min-w-0 flex-1 truncate ${hidden.has(h.date) ? 'text-muted line-through' : ''}`}>
-                  {localize(h.name, lang)}
+                  {loc(h.name)}
                 </span>
                 <label className="flex shrink-0 cursor-pointer items-center gap-1.5 text-xs text-fg-2">
                   <input
@@ -536,7 +535,7 @@ export function HolidaysSection({ draft, onChange }: Pick<SectionProps, 'draft' 
                   {h.date}
                   {h.end ? ` – ${h.end}` : ''}
                 </span>
-                <span className="min-w-0 flex-1 truncate">{localize(h.name, lang)}</span>
+                <span className="min-w-0 flex-1 truncate">{loc(h.name)}</span>
                 <LinkButton tone="danger" onClick={() => removeCustom(i)}>
                   {t('removeCourse')}
                 </LinkButton>

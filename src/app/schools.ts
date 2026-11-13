@@ -1,3 +1,5 @@
+import { toHans } from './hant';
+
 /**
  * Candidate schools for the "School" box: QS top 500 outside mainland China
  * (`presets/schools.json`). Names only — programme and tuition are always the user's own.
@@ -29,7 +31,8 @@ export const schoolDisplayName = (s: School): string => (s.local ? `${s.local} $
 
 /** Lower-case, accent-free, punctuation-free text for matching. */
 export function normalize(text: string): string {
-  return text
+  // Traditional and Simplified spellings match each other (劍橋 finds 剑桥).
+  return toHans(text)
     .normalize('NFKD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()

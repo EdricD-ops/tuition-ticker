@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import type { Course, PlainDate, Weekday } from '../../core';
-import { lang, t } from '../../app/i18n';
+import { hant, lang, t } from '../../app/i18n';
 import {
   csvTemplate,
   mondayOf,
@@ -15,12 +15,13 @@ import { useOverlay } from './useOverlay';
 type Tab = 'ics' | 'csv' | 'text';
 
 export const dayLabel = (d: Weekday) => t(`wd${d}` as Parameters<typeof t>[0]);
-/** "周二、周四" or "Tue, Thu". */
+/** "周二、周四" ("週二、週四") or "Tue, Thu". */
 export const daysLabel = (days: Weekday[]) =>
-  lang === 'zh' ? days.map((d) => `周${dayLabel(d)}`).join('、') : days.map(dayLabel).join(', ');
+  lang === 'zh' ? days.map((d) => `${hant ? '週' : '周'}${dayLabel(d)}`).join('、') : days.map(dayLabel).join(', ');
 
 function saveTemplate() {
-  const blob = new Blob([csvTemplate(lang === 'zh')], { type: 'text/csv;charset=utf-8' });
+  const language = lang === 'en' ? 'en' : hant ? 'zh-Hant' : 'zh';
+  const blob = new Blob([csvTemplate(language)], { type: 'text/csv;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
