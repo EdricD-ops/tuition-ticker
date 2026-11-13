@@ -1,12 +1,29 @@
 import { isValidPlainDate, isValidPlainTime, isValidTimeZone, timeToMinutes } from './dates';
-import type { Course, TickerConfig } from './types';
+import type { Course, QuickSetup, TickerConfig } from './types';
+
+/** Longest class quick setup accepts: a full day. */
+export const MAX_QUICK_MINUTES = 24 * 60;
+
+export const isQuick = (config: TickerConfig): boolean => config.mode === 'quick';
+
+export function isValidQuick(q: QuickSetup | undefined): q is QuickSetup {
+  return (
+    !!q &&
+    Number.isInteger(q.classes) &&
+    q.classes > 0 &&
+    Number.isFinite(q.minutes) &&
+    q.minutes > 0 &&
+    q.minutes <= MAX_QUICK_MINUTES
+  );
+}
 
 export type IssueCode =
   | 'invalid-timezone'
   | 'invalid-term-start'
   | 'invalid-course'
   | 'no-courses'
-  | 'non-positive-tuition';
+  | 'non-positive-tuition'
+  | 'invalid-quick';
 
 export interface Issue {
   code: IssueCode;
@@ -36,6 +53,12 @@ export function validateConfig(config: TickerConfig): Issue[] {
 
   if (!isValidTimeZone(config.timeZone)) {
     issues.push({ code: 'invalid-timezone', blocking: true });
+  }
+
+  if (isQuick(config)) {
+    if (!isValidQuick(config.quick)) issues.push({ code: 'invalid-quick', blocking: true });
+    if (!(config.tuition > 0)) issues.push({ code: 'non-positive-tuition', blocking: false });
+    return issues;
   }
 
   if (!isValidPlainDate(config.termStart)) {

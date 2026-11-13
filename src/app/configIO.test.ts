@@ -91,3 +91,25 @@ describe('programme', () => {
     expect(parseConfig({ schoolName: 'HKU', programme: 'MSc CS', courses: [] })?.programme).toBe('MSc CS');
   });
 });
+
+describe('quick setup', () => {
+  it('reads old configs as timetables', () => {
+    const parsed = parseConfig({ courses: [] })!;
+    expect(parsed.mode).toBe('full');
+    expect(parsed.quick).toEqual({ classes: 0, minutes: 180 });
+  });
+
+  it('round-trips a quick config and cleans bad numbers', () => {
+    const quick = makeConfig({ mode: 'quick', quick: { classes: 52, minutes: 90 } });
+    expect(parseConfig(JSON.parse(JSON.stringify(quick)))).toEqual(quick);
+    expect(parseConfig({ mode: 'quick', quick: { classes: 12.4, minutes: -5 }, courses: [] })!.quick).toEqual({
+      classes: 12,
+      minutes: 180,
+    });
+  });
+
+  it('starts new users on quick setup', () => {
+    expect(blankConfig().mode).toBe('quick');
+  });
+});
+

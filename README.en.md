@@ -41,12 +41,13 @@ No sign-up and no install: **first-time visitors see a live demo straight away**
 ## Get started
 
 1. Open the site and click **Use my school** in the top right
-2. Enter your school, tuition and first day of term, then add courses (or import a timetable)
-3. In class, open the page and tap the course you're in
+2. Enter your total tuition, how many classes and how long each one is: ten seconds later you see what one class costs (for more detail, switch to the timetable setup: first day of term plus each course's days and times, or import a timetable)
+3. In class, open the page and tap **Start** (or, with a timetable, the course you're in)
 
 ## How it's calculated
 
 - **Cost per second = total tuition ÷ total seconds of class in the term**, one rate for every course
+- With quick setup, total class time = number of classes × class length; the rules below apply to the timetable setup
 - Each course meets on its weekdays for its number of weeks, counted from the first day of term; overlapping classes are counted once
 - Classes on school holidays, and on public holidays you haven't muted, don't count; their share is spread over the remaining classes
 - Times are read in **the school's time zone**, so travelling or flying home doesn't change anything, and daylight saving time is handled

@@ -8,6 +8,8 @@ import {
   type Snapshot,
 } from '../core';
 import { daysLabel } from './settings/ImportDialog';
+import { NumberInput } from './settings/fields';
+import { classLength } from '../app/classLength';
 import { lang, t } from '../app/i18n';
 import quips from '../data/quips.json';
 import { Approx } from './Fx';
@@ -248,6 +250,145 @@ export function SemesterHero({ snap, currency }: { snap: Snapshot; currency: str
         </span>
       </div>
     </div>
+  );
+}
+
+/** Quick mode, no class running: the price of one class, counted up once. */
+export function QuickHero({
+  snap,
+  minutes,
+  currency,
+}: {
+  snap: Snapshot;
+  minutes: number;
+  currency: string;
+}) {
+  const { totals } = snap;
+  const perClass = useCountUp(totals.averageSessionCost);
+  return (
+    <div>
+      <HeroHead eyebrow={t('offClass')} title={t('oneClassCosts')} />
+      <Money
+        amount={perClass}
+        currency={currency}
+        kind="live"
+        className={`rise mt-6 ${HERO_NUMBER}`}
+        symbolClassName={HERO_SYMBOL}
+        fractionClassName="text-muted"
+      />
+      <Approx amount={perClass} kind="live" className={HERO_APPROX} />
+      <Caption>
+        <Fact label={t('perSecond')}>
+          <Money amount={snap.costPerSecond} currency={currency} kind="rate" scale="class" symbolClassName="" />
+          <Approx amount={snap.costPerSecond} kind="rate" scale="class" className="ml-1.5" />
+        </Fact>
+        <Fact label={t('quickClassesLabel')}>
+          {t('quickClassesValue', { n: totals.sessionCount, len: classLength(minutes) })}
+        </Fact>
+        <Fact label={t('tuition')}>
+          <Money amount={totals.tuition} currency={currency} kind="total" symbolClassName="" />
+          <Approx amount={totals.tuition} kind="total" className="ml-1.5" />
+        </Fact>
+      </Caption>
+    </div>
+  );
+}
+
+/** Quick mode's nudge towards the timetable setup, which adds the term-to-date figures. */
+function UpgradeNote({ onUpgrade }: { onUpgrade: () => void }) {
+  return (
+    <div className="border-t border-line px-5 py-4 sm:px-6">
+      <div className="text-sm font-medium text-fg-2">{t('upgradeTitle')}</div>
+      <p className="mt-1 text-[13px] text-muted">{t('upgradeBody')}</p>
+      <Button onClick={onUpgrade} className="mt-3">
+        {t('upgradeCta')} →
+      </Button>
+    </div>
+  );
+}
+
+/**
+ * Quick mode's stand-in for the course picker: one button starts a class now, or a few
+ * minutes back for people who open the page late.
+ */
+export function QuickStart({
+  minutes,
+  onStart,
+  onUpgrade,
+}: {
+  minutes: number;
+  onStart: (elapsedMinutes: number) => void;
+  onUpgrade: () => void;
+}) {
+  const [late, setLate] = useState(0);
+  const lateOk = Number.isFinite(late) && late > 0 && late < minutes;
+  return (
+    <Panel title={t('quickStartTitle')} className="rise" style={riseStyle(2)}>
+      <div className="px-5 pt-1 pb-5 sm:px-6">
+        <Button variant="primary" onClick={() => onStart(0)} className="h-12! w-full text-[15px]!">
+          {t('quickStartNow')}
+        </Button>
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-[13px] text-fg-2">
+          <span>{t('quickElapsedLabel')}</span>
+          <NumberInput
+            aria-label={t('quickElapsedLabel')}
+            value={late}
+            min={1}
+            max={minutes - 1}
+            step={1}
+            className="h-8! w-20! px-2! text-center text-[13px]!"
+            onValue={(n) => setLate(Math.max(0, Math.round(n)))}
+          />
+          <span>{t('quickElapsedUnit')}</span>
+          {lateOk && (
+            <Button onClick={() => onStart(late)} className="ml-auto">
+              {t('quickStartLate', { n: late })}
+            </Button>
+          )}
+        </div>
+        <p className="mt-3 text-xs text-muted">{t('quickStartHint', { len: classLength(minutes) })}</p>
+      </div>
+      <UpgradeNote onUpgrade={onUpgrade} />
+    </Panel>
+  );
+}
+
+/** Quick mode's overview beside a running class: what one class and the programme cost. */
+export function QuickTotals({
+  snap,
+  minutes,
+  currency,
+  onUpgrade,
+}: {
+  snap: Snapshot;
+  minutes: number;
+  currency: string;
+  onUpgrade: () => void;
+}) {
+  const { totals } = snap;
+  return (
+    <Panel title={t('overview')} tag={<Tag>{t('perClassTag')}</Tag>} className="rise" style={riseStyle(2)}>
+      <div className="px-5 pt-1 pb-4 sm:px-6">
+        <span className="text-sm text-fg-2">{t('oneClassCosts')}</span>
+        <div className="mt-1 flex flex-wrap items-baseline gap-x-3">
+          <Money
+            amount={totals.averageSessionCost}
+            currency={currency}
+            kind="live"
+            className="text-[34px] leading-tight font-light tracking-[-0.03em]"
+          />
+          <Approx amount={totals.averageSessionCost} kind="live" className="text-[15px] font-light" />
+        </div>
+      </div>
+      <Row label={t('tuition')}>
+        <Approx amount={totals.tuition} kind="total" className="mr-2 text-[13px] font-normal" />
+        <Money amount={totals.tuition} currency={currency} kind="total" />
+      </Row>
+      <Row label={t('quickClassesLabel')}>
+        {t('quickClassesValue', { n: totals.sessionCount, len: classLength(minutes) })}
+      </Row>
+      <UpgradeNote onUpgrade={onUpgrade} />
+    </Panel>
   );
 }
 

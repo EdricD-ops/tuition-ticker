@@ -6,7 +6,14 @@ import { t } from '../../app/i18n';
 import { Button } from '../ui';
 import { SectionTitle } from './fields';
 import { useOverlay } from './useOverlay';
-import { CoursesSection, CurrencySection, HolidaysSection, SchoolSection } from './sections';
+import {
+  CoursesSection,
+  CurrencySection,
+  HolidaysSection,
+  ModeSwitch,
+  QuickSection,
+  SchoolSection,
+} from './sections';
 
 function download(config: TickerConfig) {
   const blob = new Blob([JSON.stringify(toExportFile(config), null, 2)], { type: 'application/json' });
@@ -31,6 +38,7 @@ function Block({ title, hint, children }: { title: string; hint?: string; childr
 export function SettingsDrawer({
   config,
   banner,
+  flagErrors = false,
   onSave,
   onClose,
   onReset,
@@ -38,6 +46,8 @@ export function SettingsDrawer({
   config: TickerConfig;
   /** A note shown above the form, e.g. when the config came from a share link. */
   banner?: string;
+  /** Show every gap straight away (configs from elsewhere may be incomplete). */
+  flagErrors?: boolean;
   onSave: (config: TickerConfig) => void;
   onClose: () => void;
   /** Clears the saved config and returns to the demo; absent when nothing is saved yet. */
@@ -45,8 +55,7 @@ export function SettingsDrawer({
 }) {
   useOverlay(onClose);
   const [draft, setDraft] = useState(config);
-  // Configs from elsewhere (share links) may be incomplete: flag gaps straight away.
-  const [showErrors, setShowErrors] = useState(!!banner);
+  const [showErrors, setShowErrors] = useState(flagErrors);
   const [notice, setNotice] = useState<{ ok: boolean; text: string } | null>(null);
   const errors = useMemo(() => formErrors(draft), [draft]);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -78,6 +87,7 @@ export function SettingsDrawer({
   };
 
   const section = { draft, onChange: setDraft, errors, showErrors };
+  const quick = draft.mode === 'quick';
 
   return (
     <div className="fixed inset-0 z-40 flex justify-end">
@@ -99,15 +109,26 @@ export function SettingsDrawer({
               {banner}
             </p>
           )}
+          <Block title={t('modeTitle')}>
+            <ModeSwitch mode={draft.mode ?? 'full'} onChange={(mode) => setDraft({ ...draft, mode })} />
+          </Block>
           <Block title={t('stepSchool')}>
             <SchoolSection {...section} />
           </Block>
-          <Block title={t('coursesTitle')} hint={t('coursesHint')}>
-            <CoursesSection {...section} />
-          </Block>
-          <Block title={t('holidaysTitle')} hint={t('holidaysHint')}>
-            <HolidaysSection draft={draft} onChange={setDraft} />
-          </Block>
+          {quick ? (
+            <Block title={t('coursesTitle')}>
+              <QuickSection {...section} />
+            </Block>
+          ) : (
+            <>
+              <Block title={t('coursesTitle')} hint={t('coursesHint')}>
+                <CoursesSection {...section} />
+              </Block>
+              <Block title={t('holidaysTitle')} hint={t('holidaysHint')}>
+                <HolidaysSection draft={draft} onChange={setDraft} />
+              </Block>
+            </>
+          )}
           <Block title={t('fxTitle')}>
             <CurrencySection draft={draft} onChange={setDraft} />
           </Block>

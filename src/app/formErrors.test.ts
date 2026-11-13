@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { makeConfig } from '../core/testUtils';
-import { coursesStepValid, formErrors, isFormValid, schoolStepValid } from './formErrors';
+import { coursesStepValid, formErrors, isFormValid, quickValid, schoolStepValid } from './formErrors';
 
 describe('formErrors', () => {
   it('accepts a complete config', () => {
@@ -40,5 +40,18 @@ describe('formErrors', () => {
     const e = formErrors(makeConfig({ termStart: '' }));
     expect(e.termStart).toBe('errTermStart');
     expect(coursesStepValid(e)).toBe(false);
+  });
+
+  it('quick setup needs only tuition, classes and length', () => {
+    const base = makeConfig({ mode: 'quick', schoolName: '', termStart: '', courses: [] });
+    const ok = formErrors({ ...base, quick: { classes: 40, minutes: 180 } });
+    expect(isFormValid(ok)).toBe(true);
+
+    const bad = formErrors({ ...base, tuition: 0, quick: { classes: 0, minutes: 0 } });
+    expect(bad.tuition).toBe('errTuition');
+    expect(bad.quickClasses).toBe('errCourseCount');
+    expect(bad.quickMinutes).toBe('errQuickMinutes');
+    expect(bad.schoolName).toBeUndefined();
+    expect(quickValid(bad)).toBe(false);
   });
 });

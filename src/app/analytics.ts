@@ -8,6 +8,8 @@
 export type TrackedEvent =
   | 'setup-open'
   | 'setup-complete'
+  | 'setup-quick'
+  | 'quick-upgrade'
   | 'reset-demo'
   | 'share-open'
   | 'share-png-3x4'

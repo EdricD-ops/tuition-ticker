@@ -1,8 +1,11 @@
 import { dateInTimeZone, weekdayOf } from './dates';
 import { holidayAt } from './holidays';
 import { buildSessions, classWindowOn, courseSeconds, mergeIntervals, type Interval } from './schedule';
-import type { ClassWindow, Course, Holiday, TickerConfig } from './types';
-import { isValidCourse, validateConfig, type Issue } from './validate';
+import type { ClassWindow, Course, Holiday, QuickSetup, TickerConfig } from './types';
+import { isQuick, isValidCourse, isValidQuick, validateConfig, type Issue } from './validate';
+
+/** `courseId` of a class started in quick mode, which has no courses. */
+export const QUICK_COURSE_ID = 'quick';
 
 export type TickerStatus =
   | 'unconfigured' // blocking config issues: nothing can be billed
@@ -14,7 +17,11 @@ export type TickerStatus =
 export interface Plan {
   config: TickerConfig;
   issues: Issue[];
-  /** Valid courses only. Empty when blocked. */
+  /** True when nothing can be billed until the config is fixed. */
+  blocked: boolean;
+  /** The quick setup in use, or null when billing follows the timetable. */
+  quick: QuickSetup | null;
+  /** Valid courses only. Empty when blocked or in quick mode. */
   courses: Course[];
   /** Every scheduled class over the term, minus holidays, sorted by start. */
   sessions: ClassWindow[];
@@ -47,6 +54,8 @@ export interface CurrentClass {
 
 export interface Snapshot {
   status: TickerStatus;
+  /** Quick mode: no timetable, so the term-to-date figures (spent, classes left) are 0. */
+  quick: boolean;
   now: number;
   costPerSecond: number;
   current: CurrentClass | null;
@@ -75,6 +84,7 @@ export interface Snapshot {
 export function createPlan(config: TickerConfig, publicHolidays: Holiday[] = []): Plan {
   const issues = validateConfig(config);
   const blocked = issues.some((i) => i.blocking);
+  if (isQuick(config)) return createQuickPlan(config, issues, blocked);
   const courses = blocked ? [] : config.courses.filter(isValidCourse);
   const scheduled = blocked ? [] : buildSessions(courses, config.termStart, config.timeZone);
   const sessions = scheduled.filter((s) => !holidayAt(config, publicHolidays, s.date));
@@ -88,6 +98,8 @@ export function createPlan(config: TickerConfig, publicHolidays: Holiday[] = [])
   return {
     config,
     issues,
+    blocked: blocked || courses.length === 0,
+    quick: null,
     courses,
     sessions,
     skippedForHolidays: scheduled.length - sessions.length,
@@ -96,6 +108,46 @@ export function createPlan(config: TickerConfig, publicHolidays: Holiday[] = [])
     totalSeconds,
     totalSessions: sessions.length,
     costPerSecond,
+  };
+}
+
+/**
+ * Quick mode: total class time is simply classes × minutes. There is no timetable, so no
+ * sessions to place in time and no holidays to drop.
+ */
+function createQuickPlan(config: TickerConfig, issues: Issue[], blocked: boolean): Plan {
+  const quick = !blocked && isValidQuick(config.quick) ? config.quick : null;
+  const totalSeconds = quick ? quick.classes * quick.minutes * 60 : 0;
+  return {
+    config,
+    issues,
+    blocked: quick === null,
+    quick,
+    courses: [],
+    sessions: [],
+    skippedForHolidays: 0,
+    merged: [],
+    prefix: [0],
+    totalSeconds,
+    totalSessions: quick ? quick.classes : 0,
+    costPerSecond: totalSeconds > 0 && config.tuition > 0 ? config.tuition / totalSeconds : 0,
+  };
+}
+
+/**
+ * Quick mode: a class that started `elapsedMinutes` ago (0 = right now) and lasts the
+ * configured length. Null when the plan is not in quick mode.
+ */
+export function startQuickClass(plan: Plan, now: number, elapsedMinutes = 0): ClassWindow | null {
+  if (!plan.quick) return null;
+  const length = plan.quick.minutes * 60_000;
+  const elapsed = Math.min(Math.max(0, elapsedMinutes) * 60_000, length - 1000);
+  const start = now - Math.max(0, elapsed);
+  return {
+    courseId: QUICK_COURSE_ID,
+    date: dateInTimeZone(start, plan.config.timeZone),
+    start,
+    end: start + length,
   };
 }
 
@@ -163,7 +215,7 @@ export function coursesInSession(plan: Plan, now: number): string[] {
 export function getSnapshot(plan: Plan, active: ClassWindow | null, now: number): Snapshot {
   const { costPerSecond, totalSessions, config } = plan;
   const tuition = Math.max(0, config.tuition);
-  const blocked = plan.courses.length === 0;
+  const blocked = plan.blocked;
 
   const spent = Math.min(tuition, (elapsedClassMs(plan, now) / 1000) * costPerSecond);
   const sessionsStarted = countStarted(plan.sessions, now);
@@ -192,6 +244,7 @@ export function getSnapshot(plan: Plan, active: ClassWindow | null, now: number)
 
   return {
     status,
+    quick: plan.quick !== null,
     now,
     costPerSecond,
     current,

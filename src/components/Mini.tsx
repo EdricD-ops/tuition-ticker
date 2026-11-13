@@ -115,6 +115,31 @@ export function MiniBoard({
         <Approx amount={current.cost} kind="live" className={APPROX} />
       </>
     );
+  } else if (snap.quick) {
+    // Quick mode has no term-to-date figure: show what one class costs.
+    eyebrow = <Eyebrow>{`${t('offClass')} · ${t('oneClassCosts')}`}</Eyebrow>;
+    body = (
+      <>
+        <Money
+          amount={totals.averageSessionCost}
+          currency={currency}
+          kind="live"
+          className={`mt-2 ${FIGURE}`}
+          symbolClassName={SYMBOL}
+          fractionClassName="text-muted"
+        />
+        <Approx amount={totals.averageSessionCost} kind="live" className={APPROX} />
+        <Foot
+          left={
+            <>
+              {t('perSecond')}{' '}
+              <Money amount={snap.costPerSecond} currency={currency} kind="rate" scale="class" symbolClassName="" />
+            </>
+          }
+          right={null}
+        />
+      </>
+    );
   } else {
     eyebrow = <Eyebrow>{`${t('offClass')} · ${t('spentSoFar')}`}</Eyebrow>;
     body = (

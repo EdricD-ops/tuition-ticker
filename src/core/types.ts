@@ -18,7 +18,23 @@ export interface Course {
   weeks: number;
 }
 
+/**
+ * Quick setup: just the number of classes and their length, no timetable. Enough for the
+ * cost per second and per class; term-to-date totals need the full timetable.
+ */
+export interface QuickSetup {
+  /** Classes in the whole programme. Positive integer. */
+  classes: number;
+  /** Length of one class in minutes. */
+  minutes: number;
+}
+
+export type SetupMode = 'quick' | 'full';
+
 export interface TickerConfig {
+  /** `quick` bills from `quick` and ignores the timetable. Absent means `full`. */
+  mode?: SetupMode;
+  quick?: QuickSetup;
   /** The school, as shown on the dashboard (e.g. "香港大學 The University of Hong Kong"). */
   schoolName: string;
   /** The programme being studied, optional (e.g. "MSc Computer Science"). */

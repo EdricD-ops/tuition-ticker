@@ -3,6 +3,7 @@ import {
   isValidTimeZone,
   type Course,
   type Holiday,
+  type QuickSetup,
   type TickerConfig,
   type Weekday,
 } from '../core';
@@ -22,6 +23,15 @@ const isObject = (v: unknown): v is Record<string, unknown> => typeof v === 'obj
 const str = (v: unknown, fallback = ''): string => (typeof v === 'string' ? v : fallback);
 const num = (v: unknown, fallback = 0): number =>
   typeof v === 'number' && Number.isFinite(v) ? v : fallback;
+
+/** Default class length for quick setup, in minutes. */
+export const DEFAULT_CLASS_MINUTES = 180;
+
+function toQuick(v: unknown): QuickSetup {
+  const q = isObject(v) ? v : {};
+  const minutes = num(q.minutes, DEFAULT_CLASS_MINUTES);
+  return { classes: Math.max(0, Math.round(num(q.classes))), minutes: minutes > 0 ? minutes : DEFAULT_CLASS_MINUTES };
+}
 
 export function newId(): string {
   try {
@@ -68,6 +78,9 @@ export function parseConfig(input: unknown): TickerConfig | null {
   const timeZone = str(raw.timeZone);
   const display = raw.displayCurrency;
   return {
+    // Configs from before quick setup existed are all timetables.
+    mode: raw.mode === 'quick' ? 'quick' : 'full',
+    quick: toQuick(raw.quick),
     schoolName: str(raw.schoolName),
     programme: str(raw.programme),
     region: region.code,
@@ -91,10 +104,12 @@ export function toExportFile(config: TickerConfig, now = new Date()): ExportFile
   return { app: 'tuition-ticker', version: EXPORT_VERSION, exportedAt: now.toISOString(), config };
 }
 
-/** Starting point for the setup wizard. */
+/** Starting point for the setup wizard: quick setup, with a blank timetable to switch to. */
 export function blankConfig(): TickerConfig {
   const region = guessRegion();
   return {
+    mode: 'quick',
+    quick: { classes: 0, minutes: DEFAULT_CLASS_MINUTES },
     schoolName: '',
     programme: '',
     region: region.code,

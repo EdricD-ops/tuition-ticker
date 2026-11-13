@@ -7,10 +7,13 @@ import {
   localize,
   type Course,
   type Holiday,
+  type QuickSetup,
+  type SetupMode,
   type TickerConfig,
   type Weekday,
 } from '../../core';
-import { newId, withCurrency } from '../../app/configIO';
+import { classLength } from '../../app/classLength';
+import { DEFAULT_CLASS_MINUTES, newId, withCurrency } from '../../app/configIO';
 import type { FormErrors } from '../../app/formErrors';
 import { publicHolidaysFor } from '../../app/holidayData';
 import { lang, locale, t } from '../../app/i18n';
@@ -53,6 +56,7 @@ export function SchoolSection({ draft, onChange, errors, showErrors }: SectionPr
         draft={draft}
         onChange={onChange}
         error={msg(errors.schoolName, showErrors)}
+        optional={draft.mode === 'quick'}
         className="sm:col-span-2"
       />
       <Field label={t('programme')} className="sm:col-span-2">
@@ -80,6 +84,16 @@ export function SchoolSection({ draft, onChange, errors, showErrors }: SectionPr
           ))}
         </Select>
       </Field>
+      <TuitionFields draft={draft} onChange={onChange} errors={errors} showErrors={showErrors} />
+      <p className="-mt-2 text-xs text-muted sm:col-span-2">{t('timeZoneHint')}</p>
+    </div>
+  );
+}
+
+/** Tuition currency and amount: two cells of a two-column grid. */
+export function TuitionFields({ draft, onChange, errors, showErrors }: SectionProps) {
+  return (
+    <>
       <Field label={t('currency')}>
         <Select value={draft.currency} onChange={(e) => onChange(withCurrency(draft, e.target.value))}>
           {(CURRENCIES.includes(draft.currency) ? CURRENCIES : [draft.currency, ...CURRENCIES]).map(
@@ -100,7 +114,154 @@ export function SchoolSection({ draft, onChange, errors, showErrors }: SectionPr
           onValue={(n) => onChange({ ...draft, tuition: Math.max(0, n) })}
         />
       </Field>
-      <p className="-mt-2 text-xs text-muted sm:col-span-2">{t('timeZoneHint')}</p>
+    </>
+  );
+}
+
+/** Class lengths offered as one-tap choices, in minutes. */
+const LENGTHS = [50, 90, 120, 180];
+
+function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: string }) {
+  return (
+    <button
+      type="button"
+      aria-pressed={on}
+      onClick={onClick}
+      className={`h-8 min-w-0 flex-1 rounded px-2 text-[13px] whitespace-nowrap transition-colors duration-150 ${
+        on ? 'bg-fg font-medium text-bg' : 'text-fg-2 hover:bg-raised'
+      }`}
+    >
+      {children}
+    </button>
+  );
+}
+
+/**
+ * Quick setup: how many classes and how long each. A small helper turns "classes per week ×
+ * weeks" into the total for people who don't know it offhand.
+ */
+export function QuickSection({ draft, onChange, errors, showErrors }: SectionProps) {
+  const quick: QuickSetup = draft.quick ?? { classes: 0, minutes: DEFAULT_CLASS_MINUTES };
+  const set = (patch: Partial<QuickSetup>) => onChange({ ...draft, quick: { ...quick, ...patch } });
+  const [perWeek, setPerWeek] = useState(0);
+  const [weeks, setWeeks] = useState(13);
+  const fromWeeks = (pw: number, wk: number) => {
+    setPerWeek(pw);
+    setWeeks(wk);
+    if (pw > 0 && wk > 0) set({ classes: Math.round(pw * wk) });
+  };
+  const [custom, setCustom] = useState(() => !LENGTHS.includes(quick.minutes));
+  const plan = useMemo(() => createPlan({ ...draft, mode: 'quick', quick }), [draft, quick]);
+  const small = 'h-8! w-16! px-2! text-center text-[13px]!';
+
+  return (
+    <div className="space-y-5">
+      <div>
+        <Field label={t('quickClasses')} error={msg(errors.quickClasses, showErrors)}>
+          <NumberInput
+            value={quick.classes}
+            min={1}
+            step={1}
+            invalid={showErrors && !!errors.quickClasses}
+            onValue={(n) => set({ classes: n })}
+          />
+        </Field>
+        <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-xs text-muted">
+          <span>{t('quickHelper')}</span>
+          <span className="flex items-center gap-1.5">
+            <NumberInput
+              aria-label={t('quickPerWeek')}
+              value={perWeek}
+              min={1}
+              step={1}
+              className={small}
+              onValue={(n) => fromWeeks(n, weeks)}
+            />
+            {t('quickPerWeek')} ×
+            <NumberInput
+              aria-label={t('quickWeeksUnit')}
+              value={weeks}
+              min={1}
+              step={1}
+              className={small}
+              onValue={(n) => fromWeeks(perWeek, n)}
+            />
+            {t('quickWeeksUnit')}
+          </span>
+        </div>
+      </div>
+
+      <div>
+        <span className="text-[13px] font-medium text-fg-2">{t('quickLength')}</span>
+        <div
+          role="group"
+          aria-label={t('quickLength')}
+          className={`mt-1.5 flex gap-1 rounded-md border p-1 ${
+            showErrors && errors.quickMinutes ? 'border-red-500/70' : 'border-line'
+          }`}
+        >
+          {LENGTHS.map((m) => (
+            <Chip
+              key={m}
+              on={!custom && quick.minutes === m}
+              onClick={() => {
+                setCustom(false);
+                set({ minutes: m });
+              }}
+            >
+              {classLength(m)}
+            </Chip>
+          ))}
+          <Chip on={custom} onClick={() => setCustom(true)}>
+            {t('quickCustomMinutes')}
+          </Chip>
+        </div>
+        {custom && (
+          <div className="mt-2 flex items-center gap-2 text-[13px] text-fg-2">
+            <NumberInput
+              aria-label={t('quickCustomMinutes')}
+              value={quick.minutes}
+              min={1}
+              max={24 * 60}
+              step={1}
+              autoFocus
+              className="w-28!"
+              invalid={showErrors && !!errors.quickMinutes}
+              onValue={(n) => set({ minutes: n })}
+            />
+            {t('quickElapsedUnit')}
+          </div>
+        )}
+        {showErrors && errors.quickMinutes && (
+          <p className="mt-1.5 text-xs text-red-500">{t(errors.quickMinutes)}</p>
+        )}
+      </div>
+
+      {plan.costPerSecond > 0 && plan.quick && (
+        <p className="num rounded-md border border-line bg-bg px-3.5 py-2.5 font-mono text-[13px] text-fg-2">
+          {t('quickPreview', {
+            perClass: formatMoney(plan.costPerSecond * plan.quick.minutes * 60, draft.currency, 'live', locale),
+            perSecond: formatMoney(plan.costPerSecond, draft.currency, 'rate', locale),
+          })}
+        </p>
+      )}
+    </div>
+  );
+}
+
+/** Quick (classes × length) or timetable billing, in the settings drawer. */
+export function ModeSwitch({ mode, onChange }: { mode: SetupMode; onChange: (mode: SetupMode) => void }) {
+  return (
+    <div>
+      <div role="group" aria-label={t('modeTitle')} className="flex gap-1 rounded-md border border-line p-1">
+        <Chip on={mode === 'quick'} onClick={() => onChange('quick')}>
+          {t('modeQuick')}
+        </Chip>
+        <Chip on={mode === 'full'} onClick={() => onChange('full')}>
+          {t('modeFull')}
+        </Chip>
+      </div>
+      <p className="mt-2 text-[13px] text-muted">{t(mode === 'quick' ? 'modeQuickHint' : 'modeFullHint')}</p>
     </div>
   );
 }

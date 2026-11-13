@@ -40,11 +40,14 @@ export function SchoolField({
   draft,
   onChange,
   error,
+  optional = false,
   className = '',
 }: {
   draft: TickerConfig;
   onChange: (next: TickerConfig) => void;
   error?: string;
+  /** Quick setup: the name only labels the dashboard. */
+  optional?: boolean;
   className?: string;
 }) {
   const id = useId();
@@ -88,6 +91,7 @@ export function SchoolField({
     <div className={`relative ${className}`}>
       <label htmlFor={`${id}-input`} className="text-[13px] font-medium text-fg-2">
         {t('schoolName')}
+        {optional && <span className="font-normal text-muted">{t('optional')}</span>}
       </label>
       <div className="mt-1.5">
         <TextInput

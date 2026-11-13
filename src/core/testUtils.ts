@@ -2,6 +2,8 @@ import type { TickerConfig } from './types';
 
 export function makeConfig(overrides: Partial<TickerConfig> = {}): TickerConfig {
   return {
+    mode: 'full',
+    quick: { classes: 0, minutes: 180 },
     schoolName: 'Test School',
     programme: '',
     region: 'HK',

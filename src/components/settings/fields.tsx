@@ -92,10 +92,12 @@ export function LinkButton({
   children,
   onClick,
   tone = 'muted',
+  className = '',
 }: {
   children: ReactNode;
   onClick: () => void;
   tone?: 'muted' | 'danger';
+  className?: string;
 }) {
   return (
     <button
@@ -103,7 +105,7 @@ export function LinkButton({
       onClick={onClick}
       className={`text-[13px] transition-colors ${
         tone === 'danger' ? 'text-muted hover:text-red-500' : 'text-fg-2 hover:text-fg'
-      }`}
+      } ${className}`}
     >
       {children}
     </button>

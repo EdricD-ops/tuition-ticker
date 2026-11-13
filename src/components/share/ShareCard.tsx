@@ -44,7 +44,7 @@ export const ShareCard = forwardRef<
   const { width, height } = CARD_SIZE[ratio];
   const live = snap.status === 'in-class' && snap.current;
   const current = snap.current;
-  const { totals } = snap;
+  const { totals, quick } = snap;
   const story = ratio === 'story';
 
   // The label names what the big figure is: with amounts hidden it is the cost per second.
@@ -54,10 +54,19 @@ export const ShareCard = forwardRef<
       : t('cardPerSecond')
     : live
       ? `${t('onClass')} · ${current!.courseName}`
-      : t('spentSoFar');
+      : quick
+        ? t('oneClassCosts')
+        : t('spentSoFar');
 
-  const heroAmount = hideAmounts ? snap.costPerSecond : live ? current!.spent : totals.spent;
-  const heroKind = hideAmounts ? 'rate' : live ? 'live' : 'total';
+  // Quick mode has no term-to-date spend, so off class the card shows one class's price.
+  const heroAmount = hideAmounts
+    ? snap.costPerSecond
+    : live
+      ? current!.spent
+      : quick
+        ? totals.averageSessionCost
+        : totals.spent;
+  const heroKind = hideAmounts ? 'rate' : live || quick ? 'live' : 'total';
 
   const stats: { label: string; value: ReactNode }[] = [];
   if (!hideAmounts) {
@@ -67,10 +76,25 @@ export const ShareCard = forwardRef<
     });
   }
   if (live) stats.push({ label: t('cardClassProgress'), value: pct(current!.progress) });
-  stats.push({ label: t('cardTuitionUsed'), value: pct(totals.progress) });
-  if (stats.length < 3) {
-    stats.push({ label: t('cardClassesLeft'), value: t('classesCount', { n: totals.sessionsRemaining }) });
+  if (quick) {
+    if (!hideAmounts && live) {
+      stats.push({
+        label: t('cardPerClass'),
+        value: <Money amount={totals.averageSessionCost} currency={currency} kind="live" symbolClassName="text-muted" />,
+      });
+    }
+    if (stats.length < 3) stats.push({ label: t('quickClassesLabel'), value: totals.sessionCount });
+  } else {
+    stats.push({ label: t('cardTuitionUsed'), value: pct(totals.progress) });
+    if (stats.length < 3) {
+      stats.push({ label: t('cardClassesLeft'), value: t('classesCount', { n: totals.sessionsRemaining }) });
+    }
   }
+  // The bar shows tuition used; quick mode only knows this class's progress.
+  const bar = quick ? (live ? current!.progress : null) : totals.progress;
+  const barLabel = quick
+    ? `${t('cardClassProgress')} · ${pct(bar ?? 0)}`
+    : t('tuitionUsed', { p: pct(totals.progress) });
 
   return (
     // Amounts here follow the card's own option, not the page's privacy toggle.
@@ -116,12 +140,14 @@ export const ShareCard = forwardRef<
               </Stat>
             ))}
           </div>
-          <div className="mt-12 h-[8px] w-full overflow-hidden rounded-full bg-track">
-            <div className="h-full rounded-full bg-bar" style={{ width: pct(totals.progress) }} />
-          </div>
-          <div className="num mt-4 font-mono text-[22px] text-muted">
-            {t('tuitionUsed', { p: pct(totals.progress) })}
-          </div>
+          {bar !== null && (
+            <>
+              <div className="mt-12 h-[8px] w-full overflow-hidden rounded-full bg-track">
+                <div className="h-full rounded-full bg-bar" style={{ width: pct(bar) }} />
+              </div>
+              <div className="num mt-4 font-mono text-[22px] text-muted">{barLabel}</div>
+            </>
+          )}
         </div>
 
         <p className={`font-serif text-[44px] leading-snug text-fg-2 italic ${story ? 'mb-20' : 'mb-12'}`}>

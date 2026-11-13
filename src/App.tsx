@@ -9,6 +9,7 @@ import {
   holidayOn,
   localize,
   startClass,
+  startQuickClass,
   type ClassWindow,
   type TickerConfig,
 } from './core';
@@ -37,6 +38,9 @@ import {
   CoursePicker,
   Finished,
   LiveClass,
+  QuickHero,
+  QuickStart,
+  QuickTotals,
   SemesterHero,
   Totals,
 } from './components/views';
@@ -64,11 +68,14 @@ export default function App() {
   const [active, setActive] = useState<ClassWindow | null>(() =>
     isDemo ? demo!.active : loadActive(Date.now()),
   );
-  const [pendingPick, setPendingPick] = useState<string | null>(null);
+  // A start held back by the holiday confirmation.
+  const [pendingStart, setPendingStart] = useState<(() => void) | null>(null);
   const [overlay, setOverlay] = useState<'setup' | 'share' | null>(null);
   const closeOverlay = useCallback(() => setOverlay(null), []);
   // The settings drawer edits a copy of `config`: the saved one, or one from a share link.
-  const [drawer, setDrawer] = useState<{ config: TickerConfig; banner?: string } | null>(null);
+  const [drawer, setDrawer] = useState<{ config: TickerConfig; banner?: string; flagErrors?: boolean } | null>(
+    null,
+  );
   const closeDrawer = useCallback(() => setDrawer(null), []);
   const openSettings = () => savedConfig && setDrawer({ config: savedConfig });
   const [linkError, setLinkError] = useState(false);
@@ -89,20 +96,31 @@ export default function App() {
     clearShareHash();
     void decodeConfig(payload).then((shared) => {
       if (shared) {
-        setDrawer({ config: shared, banner: t('sharedLoaded') });
+        setDrawer({ config: shared, banner: t('sharedLoaded'), flagErrors: true });
         track('share-link-open');
       }
       else setLinkError(true);
     });
   }, []);
 
+  /** Quick mode → the settings form switched to the timetable, ready to fill in. */
+  const openUpgrade = () => {
+    if (!savedConfig) return;
+    track('quick-upgrade');
+    setDrawer({ config: { ...savedConfig, mode: 'full' }, banner: t('upgradeBanner') });
+  };
+
   /** Leaves the demo (or applies edits) and persists the config. */
   const applyConfig = (next: TickerConfig) => {
     saveConfig(next);
     if (isDemo) {
       track('setup-complete');
+      if (next.mode === 'quick') track('setup-quick');
       setDemo(null);
       setActive(loadActive(Date.now()));
+    } else if ((next.mode ?? 'full') !== (savedConfig?.mode ?? 'full')) {
+      // A class picked under the other mode belongs to a course that no longer applies.
+      setActive(null);
     }
     setSavedConfig(next);
     setOverlay(null);
@@ -116,7 +134,7 @@ export default function App() {
     const fresh = makeDemo(Date.now());
     setDemo(fresh);
     setActive(fresh.active);
-    setPendingPick(null);
+    setPendingStart(null);
     setSavedConfig(null);
     setDrawer(null);
   };
@@ -142,6 +160,8 @@ export default function App() {
   const publicHolidays = useMemo(() => publicHolidaysFor(config.region), [config.region]);
   const plan = useMemo(() => createPlan(config, publicHolidays), [config, publicHolidays]);
   const snap = getSnapshot(plan, active, now);
+  // Quick mode has no course names: its class is simply "this class".
+  if (snap.quick && snap.current && !snap.current.courseName) snap.current.courseName = t('thisClass');
 
   // Holiday and "happening now" only change on minute boundaries.
   const minute = Math.floor(now / MINUTE);
@@ -160,10 +180,14 @@ export default function App() {
     [plan],
   );
 
-  const pick = (courseId: string) => {
-    if (holiday) setPendingPick(courseId);
-    else startCourse(courseId);
+  /** Starts right away, or after a confirmation on holidays. */
+  const guarded = (start: () => void) => {
+    if (holiday) setPendingStart(() => start);
+    else start();
   };
+  const pick = (courseId: string) => guarded(() => startCourse(courseId));
+  const startQuick = (elapsedMinutes: number) =>
+    guarded(() => setActive(startQuickClass(plan, Date.now(), elapsedMinutes)));
 
   const cancel = () => setActive(null);
 
@@ -196,12 +220,20 @@ export default function App() {
       <BeforeStart current={snap.current} currency={currency} onCancel={cancel} />
     ) : snap.current && snap.status === 'finished' ? (
       <Finished current={snap.current} currency={currency} onBack={() => setActive(null)} />
+    ) : plan.quick ? (
+      <QuickHero snap={snap} minutes={plan.quick.minutes} currency={currency} />
     ) : (
       <SemesterHero snap={snap} currency={currency} />
     );
 
   const side =
-    snap.status === 'unconfigured' ? null : snap.status === 'idle' ? (
+    snap.status === 'unconfigured' ? null : plan.quick ? (
+      snap.status === 'idle' ? (
+        <QuickStart minutes={plan.quick.minutes} onStart={startQuick} onUpgrade={openUpgrade} />
+      ) : (
+        <QuickTotals snap={snap} minutes={plan.quick.minutes} currency={currency} onUpgrade={openUpgrade} />
+      )
+    ) : snap.status === 'idle' ? (
       <CoursePicker plan={plan} happeningNow={happeningNow} at={minute * MINUTE} onPick={pick} />
     ) : (
       <Totals snap={snap} currency={currency} />
@@ -298,21 +330,22 @@ export default function App() {
               <SettingsDrawer
                 config={drawer.config}
                 banner={drawer.banner}
+                flagErrors={drawer.flagErrors}
                 onSave={applyConfig}
                 onClose={closeDrawer}
                 onReset={savedConfig ? resetToDemo : undefined}
               />
             )}
 
-            {pendingPick && (
+            {pendingStart && (
               <ConfirmDialog
                 title={t('holidayConfirmTitle')}
                 body={t('holidayConfirmBody', { name: holidayName })}
                 confirmLabel={t('confirmStart')}
-                onCancel={() => setPendingPick(null)}
+                onCancel={() => setPendingStart(null)}
                 onConfirm={() => {
-                  startCourse(pendingPick);
-                  setPendingPick(null);
+                  pendingStart();
+                  setPendingStart(null);
                 }}
               />
             )}
@@ -372,10 +405,14 @@ function Header({
             </span>
           </span>
           {/* Between 640 and 768 px the buttons need the room, so the school name steps aside. */}
-          <span className="hidden h-7 w-px bg-line md:block" />
-          <span className="hidden truncate font-title text-lg leading-none text-fg-2 md:block">
-            {schoolName}
-          </span>
+          {schoolName && (
+            <>
+              <span className="hidden h-7 w-px bg-line md:block" />
+              <span className="hidden truncate font-title text-lg leading-none text-fg-2 md:block">
+                {schoolName}
+              </span>
+            </>
+          )}
         </div>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <span className="eyebrow hidden items-center gap-2 lg:flex">
@@ -400,7 +437,7 @@ function Header({
       <div className="mx-auto flex max-w-[1400px] items-center gap-2 px-5 pb-2.5 sm:hidden">
         <LiveDot on={live} />
         <span className={`eyebrow ${live ? 'text-live' : ''}`}>{statusLabel}</span>
-        <span className="min-w-0 flex-1 truncate text-[13px] text-fg-2">· {schoolName}</span>
+        <span className="min-w-0 flex-1 truncate text-[13px] text-fg-2">{schoolName && `· ${schoolName}`}</span>
         <Button onClick={onShare} className={SMALL}>
           {t('share')}
         </Button>
